@@ -1,0 +1,48 @@
+.PetButton {
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    flex-shrink: 0;
+    border: 2px solid black;
+    align-items: center;
+    text-align: right;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 23px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+}
+
+.PetButton img {
+    width: 50px;
+}
+
+.PetButton p {
+    line-height: 0;
+    flex-shrink: 0;
+    font-family: 'Boogaloo', sans-serif;
+    font-weight: 500;
+}
+
+.PetButton:not(.BtnActive):hover {
+    background-color: #e1e1e1;
+}
+
+.BtnActive {
+    background-color: #FDE74C;
+    cursor: default;
+}
+
+
+
+@media (max-width: 770px) {
+.PetButton {
+        flex-direction: column;
+        gap: 0;
+        flex: 1 1 140px;
+    }
+}

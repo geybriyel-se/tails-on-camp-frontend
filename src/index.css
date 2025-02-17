@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Boogaloo';
+    src: url('/public/fonts/Boogaloo/Boogaloo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration-thickness: 0.125em;
+}
+

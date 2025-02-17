@@ -1,0 +1,85 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home .PageBanner {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* padding-left: 4rem; */
+    padding-left: clamp(10px, 5vw, 50px);
+}
+
+.Home .PageBanner .Title {
+    color: #F3FAFE;
+    text-align: left;
+    line-height: 1.1;
+}
+
+.Home .PageBanner .Description {
+    margin-top: 15px;
+    color: #F3FAFE;
+    font-size: clamp(16px, 2vw, 18px);
+    align-self: flex-start;
+    text-align: left;
+    width: clamp(365px, 40%, 720px);
+}
+
+.Home .PageBanner .Children {
+    display: flex;
+    align-self: flex-start;
+}
+
+.Home .BannerBtn {
+font-size: 24px;
+}
+
+.Home .AboutSection {
+}
+
+.Home .AboutSection .SectionTitle {
+    line-height: 1;
+}
+
+.Home .DogBanner {
+    position: relative;
+    /* border: 1px solid coral; */
+    padding: 110px 0;
+}
+
+.Home .DogBanner .ContentContainer {
+    background-image: url('../assets/bone-pattern.svg');
+    background-repeat: repeat;
+    background-size: contain;
+    background-color: #B8E7FB;
+    background-origin: padding-box;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+    padding-left: 1em;
+}
+
+.Home .DogBanner .Image {
+    order: 2;
+    position: absolute;
+    right: 0;
+    bottom: 70px;
+    width: 900px;
+    /* height: 500px; */
+}
+
+.Home .DogBanner .SectionText {
+    width: 40%;
+}
+
+/* .Home .BannerBtn:hover {
+    box-shadow: 0px 4px 12px rgba(173, 226, 55, 0.6), 0px 0px 10px rgba(173, 226, 55, 0.8);
+} */
+
+.Home .Carousel .BtnOutlined {
+    font-size: 14px;
+}

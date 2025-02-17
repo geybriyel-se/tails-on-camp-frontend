@@ -1,0 +1,32 @@
+.ThreeColumns {
+    max-width: 1200px;
+    width: 100%;
+    /* border: 1px solid coral; */
+    display: flex;
+    flex-direction: column;
+    margin: 120px 0;
+}
+
+.ThreeColumns .SectionTitle {
+    font-size: clamp(30px, 4vw, 50px);
+    margin-bottom: 50px;
+}
+
+.ThreeColumns .ColumnContainer {
+    display: flex;  
+    justify-content: center;
+    gap: 3rem;
+}
+
+.ThreeColumns .SectionTitle {
+    font-family: 'Boogaloo', 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+@media (max-width:870px) {
+    .ThreeColumns .ColumnContainer {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

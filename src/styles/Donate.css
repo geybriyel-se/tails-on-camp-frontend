@@ -1,0 +1,149 @@
+.Donate {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.Donate .WhyDonate {
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+}
+
+.Donate .WhyDonate .ImageContainer {
+    margin-bottom: 0;
+}
+
+.Donate .WhyDonate .SectionTitle {
+    align-self: flex-start;
+    margin-top: 0;
+}
+
+.Donate .WaysAndPie .SectionTitle {
+    text-align: center;
+}
+
+.Donate .WaysAndPie {
+    /* margin-top: 20px; */
+    /* margin-bottom: 30px; */
+}
+
+.Donate .WaysAndPie .LeftContainer {
+    background-color: #B8E7FB;
+    justify-content: flex-start;
+}
+
+.Donate .WaysAndPie .ItemNumber {
+    font-size: clamp(30px, 4vw, 70px);
+    margin: 0;
+}
+
+.Donate .WaysAndPie .ItemDescription {
+    font-size: 0.45em;
+}
+
+.Donate .WaysAndPie .PieChart {
+    width: clamp(250px, 100%, 500px);
+    align-self: center;
+}
+
+.Donate .DonationChannelsBanner {
+    background-image: url('../assets/banner-donation.svg');
+    color: #F8F8F8;
+    padding: clamp(1em, 5vw, 4em);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 0;
+    margin-bottom: clamp(10px, 2vw, 30px);
+}
+
+.Donate .DonationChannelsBanner .SectionTitle {
+    margin-top: 0;
+    text-align: center;
+}
+
+.Donate .DonationChannelsBanner .SectionSubtitle {
+    margin-top: 0;
+    text-align: center;
+}
+
+.Donate .DonationChannelsBanner .SectionParagraph {
+    width: 100%;
+    text-align: center;
+    line-height: 3;
+}
+
+.Donate .DonationChannelsBanner .BannerBtn {
+    margin: auto 5px;
+    font-size: clamp(13px, 1.25rem, 25px);
+}
+
+
+.Donate .Gallery {
+    margin: 0 auto;
+    width: 90%;
+    padding-left: clamp(10px, 10vw, 100px);
+    padding-right: clamp(10px, 10vw, 100px);
+    gap: clamp(8px, 100%, 24px);
+}
+
+.Donate .Gallery .SectionTitle {
+    font-size: clamp(15px, 2vw, 25px);
+}
+
+.Donate .ChannelsGallery .LogoContainer {
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 2px black;
+    border-radius: 1.5em;
+    border: 4px solid antiquewhite;
+    transition: 0.15s ease-in-out;
+    /* width: clamp(80px, 15vw, 200px); */
+    width: clamp(80px, 10vw, 180px);
+    overflow: hidden;
+}
+
+.Donate .ChannelsGallery .LogoContainer .ChannelLogo {
+    width: 100%;
+    height: 100%;
+    /* height: auto; */
+    /* overflow: hidden; */
+    object-fit: cover;
+}
+
+.Donate .LogoContainer:hover {
+    cursor: pointer;
+    opacity: 0.75;
+    translate: 0 -5px;
+    box-shadow: 5px 10px 2px black;
+}
+
+.Donate .ChannelQRCode {
+    height: 90vh;
+}
+
+.Donate .EndBanner {
+    background-color: #ADE237;
+    min-width: 100%;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.Donate .EndBanner .SectionTitle {
+    font-size: clamp(16px, 2vw, 28px);
+    text-align: center;
+}
+
+
+@media (max-width:750px) {
+    .Donate .WaysAndPie {
+        flex-direction: column;
+    }
+    
+    .Donate .WaysAndPie .Container {
+        width: 100%;
+    }
+
+    .Donate .WaysAndPie .PieChart {
+        max-width: 400px;
+    }
+}

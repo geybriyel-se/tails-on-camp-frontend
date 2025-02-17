@@ -1,0 +1,15 @@
+.Login {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #5BC0EB;
+    transition: background 0.75s;
+}
+
+
+@media (max-width: 900px) {
+    .Login {
+        flex-wrap: wrap; /* Prevents wrapping */
+    }
+}

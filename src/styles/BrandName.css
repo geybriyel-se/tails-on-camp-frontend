@@ -1,0 +1,6 @@
+.BrandName {
+    flex-grow: 0;
+    align-self: center;
+    /* margin: auto 8em; */
+    margin: auto clamp(2rem, 5vw, 8rem);
+}

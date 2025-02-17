@@ -1,0 +1,45 @@
+.PageBanner {
+    /* display: flex; */
+    /* background: linear-gradient(#5BC0EB, 65%, #FFFFFF); */
+    padding-bottom: 110px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.PageBanner .Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    max-width: 1200px;
+    width: 90%;
+    align-self: center;
+}
+
+.PageBanner .Title {
+    font-family: 'Boogaloo', 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: clamp(60px, 4vw, 100px);
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.PageBanner .Description {
+    font-size: clamp(16px, 2vw, 18px);
+    width: clamp(300px, 75%, 900px);
+    align-self: center;
+    text-align: center;
+    margin-top: 0;
+}
+
+
+.PageBanner .Children {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}

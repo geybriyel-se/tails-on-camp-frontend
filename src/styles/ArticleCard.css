@@ -1,0 +1,60 @@
+.ArticleCard {
+    width: 300px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 2px 4px 2px black;
+    gap: 0;
+    border: 1px solid black;
+}
+
+.ArticleCard .Divider {
+    width: 30%;
+    border: #ADE237 1px solid;
+}
+
+.ArticleCard .CardIcon {
+    width: 100%;
+}
+
+
+.ArticleCard .CardTitle {
+    padding: 0 25px;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Boogaloo', 'Trebuchet MS', sans-serif;
+}
+
+.ArticleCard .CardSubtitle {
+    padding: 0 25px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.ArticleCard .CardParagraph {
+    padding: 0 25px;
+    font-size: 14px;
+    /* margin-bottom: 0; */
+}
+
+.ArticleCard .CardButton {
+    font-size: 18px;
+    padding: 0.5em;
+    border-radius: 20px;
+    border: transparent;
+    border: #ADE237 solid 2px;
+    color: #ADE237;
+    background-color: transparent;
+    text-align: center;
+}
+
+.ArticleCard .Indicator {
+    align-self: flex-end;
+    font-size: 30px;
+}
+
