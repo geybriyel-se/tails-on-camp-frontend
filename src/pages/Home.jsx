@@ -94,7 +94,7 @@ export default function Home() {
             <TwoDivs
                 className='AboutSection'
                 childrenL={[
-                    <img src={CatsImage} alt='A bunch of kittens' key={uuid()} className='ImgKittens'/>,
+                    <img src={CatsImage} alt='A bunch of kittens' key={uuid()} className='ImgKittens' />,
                 ]}
                 titleR='Tails on Camp: A Safe Haven for Strays'
                 childrenR={[
@@ -108,16 +108,18 @@ export default function Home() {
 
             </TwoDivs>
 
-            <TwoColumns
-                className="DogBanner"
-                title={"Your Title Goes Here"}
-                paragraph={[
-                    "Ad aliquam quas, assumenda dolore  suscipit quo adipisci sunt tempora. Non laboriosam veritatis nihil, omnis laudantium architecto sunt  deserunt cupiditate dignissimos, ipsam modi, recusandae vitae! illum eaque asperiores ratione, expedita.",
+            
+            
+            <TwoDivs
+                className='DogWithBanner'
+                titleL='Your Title Goes Here'
+                childrenL={[
+                    <p key={uuid()}>Ad aliquam quas, assumenda dolore  suscipit quo adipisci sunt tempora. Non laboriosam veritatis nihil, omnis laudantium architecto sunt  deserunt cupiditate dignissimos, ipsam modi, recusandae vitae! illum eaque asperiores ratione, expedita.</p>
                 ]}
-                imgSrc={DogInBox}
-                imgAlt='Kittens'
-            >
-            </TwoColumns>
+                childrenR={[
+                    <img src={DogInBox} className='DogBoxImg' alt='Dog in a box' key={uuid()}/>
+                ]}
+            />
 
             <Carousel
                 title={"LATEST FROM TAILS ON CAMP"}

@@ -21,13 +21,13 @@ export default function TwoColumns({ className, title, paragraph, imgSrc = "", i
 function TwoDivs({ className = "", titleL = "", titleR = "", childrenL = "", childrenR = "" }) {
     return (
         <section className={`TwoDivs ${className}`}>
-            <div className="Container LeftContainer">
+            <div className="Container ContainerL">
                 {titleL && <h1 className="SectionTitle">{titleL}</h1>}
                 <div className="Children ChildrenL">
                     {childrenL}
                 </div>
             </div>
-            <div className="Container RightContainer">
+            <div className="Container ContainerR">
                 {titleR && <h1 className="SectionTitle">{titleR}</h1>}
                 <div className="Children ChildrenR">
                     {childrenR}
