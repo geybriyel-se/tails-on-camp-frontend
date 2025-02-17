@@ -1,0 +1,32 @@
+.LoginForm {
+    border: 1.25px solid black;
+    border-radius: 3.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25em 4em;
+    line-height: 1.1;
+    height: 610px;
+    width: 425px;
+    align-self: center;
+    margin: auto clamp(2rem, 5vw, 8rem);
+    box-shadow: #00000025 9px 9px 3px;
+    flex-shrink: 0;
+}
+
+.LoginForm .BtnForm {
+    color: #1E1E1E;
+    background-color: #78EB5B;
+    margin: 1.25em auto;
+    margin-top: 0;
+    border-radius: 25px;
+}
+
+.LoginForm .BtnForm:hover {
+    background-color: #66D94D
+}
+
+.LoginForm .TextField {
+    margin: 0.75em auto;
+}

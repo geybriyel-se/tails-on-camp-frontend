@@ -1,0 +1,17 @@
+.MediaGrid {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin: clamp(50px, 10vw, 130px) 0;
+}
+
+.MediaGrid .GridContainer {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    align-self: center;
+}

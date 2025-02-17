@@ -1,0 +1,65 @@
+.TwoColumns {
+    /* border: 1px solid coral; */
+    flex-direction: column;
+    max-width: 1200px;
+    width: 90%;
+    margin: 130px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.TwoColumns .ContentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.TwoColumns .SectionTitle,
+.TwoDivs .SectionTitle {
+    font-family: 'Boogaloo', 'Trebuchet MS', sans-serif;
+    font-size: clamp(30px, 4vw, 50px);
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.TwoColumns .ContentContainer .NoImage {
+    column-count: 2;
+    column-gap: 3vw;
+}
+
+.TwoColumns .Image {
+    height: 100%;
+}
+
+.TwoColumns .SectionChildren {
+    margin-top: 30px;
+}
+
+
+
+/** FOR TWO DIVS **/
+.TwoDivs {
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    margin: clamp(50px, 10vw, 130px);
+}
+
+.TwoDivs .Container {
+    width: 50%;
+    flex: 1;
+    padding: clamp(1.5em, 3vw, 3.5em);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.TwoDivs .Children {
+    display: flex;
+    flex-direction: column;
+}
+

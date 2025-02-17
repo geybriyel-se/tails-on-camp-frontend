@@ -1,0 +1,84 @@
+.Carousel {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 120px 0;
+    align-items: center;
+}
+
+.Carousel .CardContainer {
+    display: flex;  
+    justify-content: center;
+    gap: 3rem;
+}
+
+.Carousel .SectionTitle {
+    font-family: 'Boogaloo', 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: clamp(30px, 4vw, 50px);
+}
+
+.Carousel .NavBtn {
+    height: 60px;
+    width: 60px;
+    align-self: center;
+    background-color: transparent;
+    border: 4px solid #999999;
+    color: #999999;
+    border-radius: 50%;
+    font-size: 40px;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    transition: ease-out 200ms;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.Carousel .IndicatorContainer {
+    margin-top: 20px;
+}
+
+.Carousel .Indicator {
+    color: #cecccc;
+    font-size: 25px;
+    padding: 2px;
+}
+
+.Carousel .ActiveIndicator {
+    color: #7b7b7b;
+}
+
+.Carousel .NavBtn:hover {
+    cursor: pointer;
+    background-color: #7b7b7b;
+    color: #e1e1e1;
+    transform: translateX(10px);
+    border: 4px solid #7b7b7b;
+}
+
+.Carousel .PrevBtn:hover {
+    transform: translateX(-10px);
+}
+
+.Carousel .NavBtn:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+
+@media (max-width:1250px) {
+    .Carousel .CardContainer {
+        display: flex;  
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .Carousel .NavBtn {
+        height: 40px;
+        width: 40px;
+        font-size: 20px;
+        border: 1px solid #7b7b7b;
+    }
+}

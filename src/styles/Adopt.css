@@ -1,0 +1,33 @@
+.Adopt {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.Adopt a {
+    text-decoration: none;
+}
+
+.Adopt .Gallery {
+    margin-top: 0;
+}
+
+.Adopt .PetButtonsContainer {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 80px;
+    width: clamp(300px, 80vw, 1200px);
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 550px) { 
+    .Adopt .PetButtonsContainer {
+        flex-wrap: wrap;
+    }
+}
+

@@ -1,0 +1,40 @@
+.OneColumn {
+    flex-direction: column;
+    max-width: 1200px;
+    width: 90%;
+    margin: 130px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.OneColumn .ContentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.OneColumn .SectionTitle {
+    font-family: 'Boogaloo', 'Trebuchet MS', sans-serif;
+    font-size: clamp(30px, 4vw, 50px);
+    margin-bottom: 0;
+}
+
+.OneColumn .SectionSubtitle {
+    font-size: 1rem;
+}
+
+.OneColumn .SectionParagraph {
+    font-size: 1.20rem;
+}
+
+.OneColumn .ImageContainer {
+    text-align: center;
+
+}
+
+.OneColumn .Image {
+    width: clamp(300px, 100%, 800px);
+}

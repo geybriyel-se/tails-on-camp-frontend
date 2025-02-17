@@ -1,0 +1,7 @@
+.BrandNameLandscape {
+    align-self: center;
+}
+
+.BrandNameLandscape img {
+    width: clamp(375px, 35vw, 500px);
+}
