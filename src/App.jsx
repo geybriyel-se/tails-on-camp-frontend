@@ -38,8 +38,9 @@ function App() {
       <CssBaseline />
       <BrowserRouter>
         <Routes>
-          <Route index element={<Login theme={toggleTheme} toggleThemeFunc={changeTheme} snackbar={openSnackbar} closeFunc={handleClose} />} />
+          <Route index element={<Home />} />
           <Route path='/register' element={<Register theme={toggleTheme} toggleThemeFunc={changeTheme} snackbar={openSnackbar} closeFunc={handleClose} />} />
+          <Route path='/login' element={<Login theme={toggleTheme} toggleThemeFunc={changeTheme} snackbar={openSnackbar} closeFunc={handleClose} />} />
           <Route path='/home' element={<Home />} />
           <Route path='/adopt' element={<Adopt />} />
           <Route path='/donate' element={<Donate />} />
