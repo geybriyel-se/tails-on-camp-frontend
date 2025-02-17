@@ -3,7 +3,7 @@ import BannerBtn from "../components/BannerBtn";
 import Navbar from "../components/Navbar";
 import PageBanner from "../components/PageBanner";
 import HeroBackground from '../assets/hero-background.svg'
-import TwoColumns from '../components/page-sections/TwoColumns';
+import TwoColumns, { TwoDivs } from '../components/page-sections/TwoColumns';
 import Footer from '../components/Footer';
 import ThreeColumns from '../components/page-sections/ThreeColumns';
 import CatsImage from '../assets/cats-image.svg'
@@ -76,7 +76,7 @@ export default function Home() {
 
             />
 
-            <TwoColumns
+            {/* <TwoColumns
                 className={"AboutSection"}
                 title={"Tails on Camp: A Safe Haven for Strays"}
                 paragraph={[
@@ -89,7 +89,24 @@ export default function Home() {
                 imgAlt='Kittens'
             >
                 <BtnOutlined name={"LEARN MORE"} url={""} />
-            </TwoColumns>
+            </TwoColumns> */}
+
+            <TwoDivs
+                className='AboutSection'
+                childrenL={[
+                    <img src={CatsImage} alt='A bunch of kittens' key={uuid()} className='ImgKittens'/>,
+                ]}
+                titleR='Tails on Camp: A Safe Haven for Strays'
+                childrenR={[
+                    "At Tails on Camp, we believe every stray deserves a loving home. Our mission is to provide rescue, rehabilitation, and rehoming for animals in need. From medical care to foster programs, we work tirelessly to give these animals a second chance at life.",
+                    <br key="LineBreak" />,
+                    <br key="LineBreak" />,
+                    "With the help of volunteers and supporters, we provide a safe space where strays can heal, thrive, and find loving homes.",
+                    <BtnOutlined name={"LEARN MORE"} url={""} className={"BtnAbout"} key={uuid()} />
+                ]}
+            >
+
+            </TwoDivs>
 
             <TwoColumns
                 className="DogBanner"
