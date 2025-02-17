@@ -108,8 +108,8 @@ export default function Home() {
 
             </TwoColumns>
 
-            
-            
+
+
             <TwoColumns
                 className='DogWithBanner'
                 titleL='Your Title Goes Here'
@@ -117,7 +117,7 @@ export default function Home() {
                     <p key={uuid()}>Ad aliquam quas, assumenda dolore  suscipit quo adipisci sunt tempora. Non laboriosam veritatis nihil, omnis laudantium architecto sunt  deserunt cupiditate dignissimos, ipsam modi, recusandae vitae! illum eaque asperiores ratione, expedita.</p>
                 ]}
                 childrenR={[
-                    <img src={DogInBox} className='DogBoxImg' alt='Dog in a box' key={uuid()}/>
+                    <img src={DogInBox} className='DogBoxImg' alt='Dog in a box' key={uuid()} />
                 ]}
             />
 

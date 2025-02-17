@@ -32,7 +32,7 @@
     margin: 0;
     padding: 0;
     transition: ease-out 200ms;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
 }
 
 .Carousel .IndicatorContainer {
@@ -80,5 +80,6 @@
         width: 40px;
         font-size: 20px;
         border: 1px solid #7b7b7b;
+        aspect-ratio: 1/1;
     }
 }
