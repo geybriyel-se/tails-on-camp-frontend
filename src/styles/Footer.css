@@ -26,6 +26,11 @@
     margin-bottom: 20px;
 }
 
+.Footer .LinksContainer .FooterSection {
+    z-index: 10;
+
+}
+
 .Footer .LinksContainer .FooterSection .SectionTitle {
     font-family: 'Boogaloo', 'Trebuchet MS', sans-serif;
     font-size: 20px;
@@ -116,6 +121,7 @@
     width: 600px;
     left: -10px;
     height: 200px;
+    z-index: 0;
 }
 
 
