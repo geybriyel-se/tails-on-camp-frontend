@@ -3,7 +3,7 @@ import OneColumn from "../components/page-sections/OneColumn";
 import PageBanner from "../components/PageBanner";
 import '../styles/Donate.css'
 import DogPeeking from '../assets/dog-peeking.svg'
-import { TwoDivs } from "../components/page-sections/TwoColumns";
+import TwoColumns from "../components/page-sections/TwoColumns";
 import { v4 as uuid } from 'uuid'
 import Chart from '../assets/chart.svg'
 import Footer from "../components/Footer";
@@ -119,7 +119,7 @@ export default function Donate() {
                 imgAlt="Dog peeking"
             />
 
-            <TwoDivs
+            <TwoColumns
                 className={"WaysAndPie"}
                 titleL={"Ways to Donate"}
                 childrenL={leftColumn}

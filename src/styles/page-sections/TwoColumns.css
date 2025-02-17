@@ -1,12 +1,12 @@
 /** FOR TWO DIVS **/
-.TwoDivs {
+.TwoColumns {
     display: flex;
     max-width: 1200px;
     width: 90%;
     margin: clamp(50px, 10vw, 130px);
 }
 
-.TwoDivs .Container {
+.TwoColumns .Container {
     width: 50%;
     flex: 1;
     padding: clamp(1.5em, 3vw, 3.5em);
@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
 }
-.TwoDivs .Children {
+.TwoColumns .Children {
     display: flex;
     flex-direction: column;
     font-size: clamp(12px, 1.5vw, 16px);
@@ -24,13 +24,13 @@
 
 
 @media (max-width:750px) {
-    .TwoDivs {
+    .TwoColumns {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     
-    .TwoDivs{
+    .TwoColumns{
         max-width: 400px;
         width: 100%;
     }

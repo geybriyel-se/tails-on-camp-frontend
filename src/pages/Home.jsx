@@ -3,7 +3,7 @@ import BannerBtn from "../components/BannerBtn";
 import Navbar from "../components/Navbar";
 import PageBanner from "../components/PageBanner";
 import HeroBackground from '../assets/hero-background.svg'
-import TwoColumns, { TwoDivs } from '../components/page-sections/TwoColumns';
+import TwoColumns from '../components/page-sections/TwoColumns';
 import Footer from '../components/Footer';
 import ThreeColumns from '../components/page-sections/ThreeColumns';
 import CatsImage from '../assets/cats-image.svg'
@@ -91,7 +91,7 @@ export default function Home() {
                 <BtnOutlined name={"LEARN MORE"} url={""} />
             </TwoColumns> */}
 
-            <TwoDivs
+            <TwoColumns
                 className='AboutSection'
                 childrenL={[
                     <img src={CatsImage} alt='A bunch of kittens' key={uuid()} className='ImgKittens' />,
@@ -106,11 +106,11 @@ export default function Home() {
                 ]}
             >
 
-            </TwoDivs>
+            </TwoColumns>
 
             
             
-            <TwoDivs
+            <TwoColumns
                 className='DogWithBanner'
                 titleL='Your Title Goes Here'
                 childrenL={[
