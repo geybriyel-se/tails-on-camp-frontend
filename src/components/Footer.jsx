@@ -1,5 +1,6 @@
 import '../styles/Footer.css'
 import line from '../assets/line.svg'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
 
@@ -10,20 +11,20 @@ export default function Footer() {
                     <img className="LineDecor" src={line} />
                     <article className='FooterSection'>
                         <p className="SectionTitle">HOW TO HELP</p>
-                        <p className='SectionItem'><a href="/adopt">Adoption</a></p>
-                        <p className='SectionItem'><a href="/contact">Donate</a></p>
-                        <p className='SectionItem'><a href="/contact">Volunteer</a></p>
+                        <p className='SectionItem'><Link to="/adopt">Adoption</Link></p>
+                        <p className='SectionItem'><Link to="/donate">Donate</Link></p>
+                        <p className='SectionItem'><Link to="/volunteer">Volunteer</Link></p>
                     </article>
                     <article className='FooterSection'>
                         <p className="SectionTitle">ABOUT US</p>
-                        <p className='SectionItem'><a href="/about">Our Story</a></p>
-                        <p className='SectionItem'><a href="/about">Mission & Values</a></p>
-                        <p className='SectionItem'><a href="/about">Contact Us</a></p>
+                        <p className='SectionItem'><Link to="/about">Our Story</Link></p>
+                        <p className='SectionItem'><Link to="/about">Mission & Values</Link></p>
+                        <p className='SectionItem'><Link to="/contact">Contact Us</Link></p>
                     </article>
                     <article className='FooterSection'>
                         <p className="SectionTitle">RESOURCES</p>
-                        <p className='SectionItem'><a href="/about">FAQs</a></p>
-                        <p className='SectionItem'><a href="/about">Success Stories</a></p>
+                        <p className='SectionItem'><Link to="/about">FAQs</Link></p>
+                        <p className='SectionItem'><Link to="/bulletin">Success Stories</Link></p>
                     </article>
                 </section>
                 <section className="FormContainer">
