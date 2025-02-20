@@ -22,7 +22,7 @@
     width: 100%;
 }
 
-/* Desktop Layout */
+
 .GridContainer .image-1 { grid-column: 1; grid-row: 2; }
 .GridContainer .image-2 { grid-column: 1; grid-row: 3 / 5; }
 .GridContainer .image-3 { grid-row: 1 / 3; grid-column: 2 / 4; }
@@ -37,11 +37,121 @@
 .GridContainer .image-12 { grid-column: 6; grid-row: 3; }
 .GridContainer .image-13 { grid-column: 6; grid-row: 4; }
 
-/* Responsive Layout - Moves Half of the Grid to the Bottom */
+
+/**************************
+*
+*   TESTIMONIAL SECTION
+*
+**************************/
+
+.Volunteer .TestimonialSection {
+    background-color: #EAEAEA;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Volunteer .TestimonialSection .Carousel {
+    margin: 40px auto;
+}
+
+.Volunteer .TestimonialSection .Carousel .CarouselItem {
+    width: 100%;
+}
+
+.Volunteer .TestimonialSection .CardContainer {
+    width: 100%;
+    gap: 1.5em;
+}
+
+.Volunteer .TestimonialSection .SectionTitle {
+    color: #A8C5DA;
+    font-size: clamp(12px, 2vw, 24px);
+    margin: 0;
+}
+
+.Volunteer .TestimonialSection .SectionSubtitle {
+    text-align: center;
+    font-family: 'Boogaloo', 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: clamp(12px, 6vw, 42px);
+    line-height: 1;
+}
+
+.Volunteer .TestimonialSection .ArticleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #A8C5DA;
+    border: 1px solid #1e1e1e;
+    border-radius: 30px;
+    padding-top: 45px;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+.Volunteer .TestimonialSection .ArticleContainer .ProfilePic {
+    border-radius: 50%;
+    width: 75px;
+    position: absolute;
+    z-index: 12;
+    top: 10px;
+    border: 1px solid #1e1e1e;
+}
+
+.Volunteer .TestimonialSection .ArticleContainer .ArticleCard::before {
+    content: "“"; 
+    font-size: clamp(36px, 8vw, 40px);
+    color: #A8C5DA; 
+    position: absolute;
+    top: 48px;
+    left: 8px;
+}
+
+.Volunteer .TestimonialSection .ArticleContainer .ArticleCard::after {
+    content: "”"; 
+    font-size: clamp(36px, 8vw, 40px);
+    color: #A8C5DA;
+    position: absolute;
+    bottom: -20px;
+    right: 12px;
+}
+
+.Volunteer .TestimonialSection .ArticleContainer .ArticleCard {
+    background-color: #F5F5F5;
+    box-shadow: none;
+    border-radius: 30px;
+    width: 95%;
+    padding-top: 30px;
+}
+
+.Volunteer .TestimonialSection .ArticleContainer .CardTitle {
+    font-size: clamp(12px, 2vw, 18px);
+}
+
+.Volunteer .TestimonialSection .ArticleContainer .CardParagraph {
+    font-style: italic;
+    line-height: 1.2;
+    text-align: center;
+    font-size: clamp(10px, 1vw, 12px);
+}
+
+.Volunteer .TestimonialSection .CardContainer .SideItem {
+    scale: 70%;
+    opacity: 80%;
+}
+
+
+
 @media (max-width: 768px) {
     .Volunteer .EventsGrid .GridContainer {
-        grid-template-columns: repeat(2, 1fr);  /* Switch to 2 columns */
-        grid-template-rows: auto; /* Adjust row height dynamically */
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto; 
     }
 
     .GridContainer .image-1 { grid-column: 1; grid-row: 1; }
@@ -57,4 +167,14 @@
     .GridContainer .image-11 { grid-column: 1; grid-row: 7; }
     .GridContainer .image-12 { grid-column: 2; grid-row: 7; }
     .GridContainer .image-13 { grid-column: 1 / 3; grid-row: 8; }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .Volunteer .TestimonialSection .CarouselItem {
+        width: 100%;
+    }
+    
 }

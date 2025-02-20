@@ -2,11 +2,11 @@ import { useState, useEffect } from "react"
 import '../styles/Carousel.css'
 import { v4 as uuid } from 'uuid'
 
-export default function Carousel({ title, articles }) {
+export default function Carousel({ title, subtitle, articles, className = "" }) {
     function getNumVisible() {
-        if (window.innerWidth <= 480) return 1; // Mobile: 1 card
-        if (window.innerWidth <= 768) return 2; // Tablet: 2 cards
-        return 3; // Desktop: 3 cards
+        if (window.innerWidth <= 480) return 1;
+        if (window.innerWidth <= 768) return 2;
+        return 3;
     }
 
     const [numVisible, setNumVisible] = useState(getNumVisible());
@@ -19,7 +19,7 @@ export default function Carousel({ title, articles }) {
     const [disablePrevBtn, setDisablePrevBtn] = useState(true);
     const [disableNextBtn, setDisableNextBtn] = useState(numVisible >= articles.length);
 
-    // ✅ Update numVisible on screen resize
+    // Update numVisible on screen resize
     useEffect(() => {
         function handleResize() {
             const newNumVisible = getNumVisible();
@@ -37,7 +37,7 @@ export default function Carousel({ title, articles }) {
             <span
                 className="Indicator ActiveIndicator"
                 key={uuid()}
-                style={{cursor:"default"}}
+                style={{ cursor: "default" }}
             >●</span> :
             <span
                 className="Indicator"
@@ -79,11 +79,21 @@ export default function Carousel({ title, articles }) {
     }
 
     return (
-        <section className="Carousel">
-            <h1 className="SectionTitle">{title}</h1>
+        <section className={`Carousel ${className}`}>
+            {title && <h1 className="SectionTitle">{title}</h1>}
+            {subtitle && <h2 className="SectionSubtitle">{subtitle}</h2>}
             <div className="CardContainer">
                 <button className="NavBtn PrevBtn" onClick={showPrev} disabled={disablePrevBtn}>&lt;</button>
-                {visibleArticles}
+                {
+                    visibleArticles.map((article, i) => (
+                        <div
+                            key={uuid()}
+                            className={`CarouselItem ${window.innerWidth < 768 ? "" : i === 1 ? "ActiveItem" : "SideItem"}`}
+                        >
+                            {article}
+                        </div>
+                    ))
+                }
                 <button className="NavBtn NextBtn" onClick={showNext} disabled={disableNextBtn}>&gt;</button>
             </div>
             <div className="IndicatorContainer">

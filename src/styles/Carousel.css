@@ -5,6 +5,7 @@
     flex-direction: column;
     margin: 120px 0;
     align-items: center;
+    position: relative;
 }
 
 .Carousel .CardContainer {
@@ -20,19 +21,34 @@
 }
 
 .Carousel .NavBtn {
-    height: 60px;
-    width: 60px;
+    width: clamp(30px, 5vw, 40px);
+    font-size: clamp(14px, 2vw, 16px);
     align-self: center;
     background-color: transparent;
-    border: 4px solid #999999;
+    border: 2px solid #999999;
     color: #999999;
     border-radius: 50%;
-    font-size: 40px;
     line-height: 0;
-    margin: 0;
-    padding: 0;
-    transition: ease-out 200ms;
+    transition: ease-out 0.5s;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    aspect-ratio: 1/1;
+    position: absolute;
+}
+
+.Carousel .PrevBtn {
+    left: 10px;
+}
+
+.Carousel .NextBtn {
+    right: 10px;
+}
+
+.Carousel .CarouselItem {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 calc(90% / 3);
+    max-width: calc(90% / 3);
+    display: flex;
 }
 
 .Carousel .IndicatorContainer {
@@ -41,7 +57,7 @@
 
 .Carousel .Indicator {
     color: #cecccc;
-    font-size: 25px;
+    font-size: clamp(14px, 2.2vw, 25px);
     padding: 2px;
 }
 
@@ -53,13 +69,9 @@
     cursor: pointer;
     background-color: #7b7b7b;
     color: #e1e1e1;
-    transform: translateX(10px);
     border: 4px solid #7b7b7b;
 }
 
-.Carousel .PrevBtn:hover {
-    transform: translateX(-10px);
-}
 
 .Carousel .NavBtn:disabled {
     pointer-events: none;
@@ -74,12 +86,29 @@
         justify-content: center;
         gap: 1rem;
     }
+}
 
-    .Carousel .NavBtn {
-        height: 40px;
-        width: 40px;
-        font-size: 20px;
-        border: 1px solid #7b7b7b;
-        aspect-ratio: 1/1;
+
+@media (max-width: 768px) {
+    .Carousel .CarouselItem {
+        min-width: 200px;
+    }
+
+    .Carousel .CardContainer {
+        gap: min(8px);
+    }
+}
+
+@media (max-width: 480px) {
+    .Carousel .CarouselItem {
+        width: 100%;
+    }
+
+    .Carousel .NextBtn {
+        right: 35px;
+    }
+
+    .Carousel .PrevBtn {
+        left: 35px;
     }
 }
