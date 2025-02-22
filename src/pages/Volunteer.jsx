@@ -33,6 +33,8 @@ import Event2 from '../assets/event-2.png'
 import Event3 from '../assets/event-3.png'
 import BtnOutlined from '../components/BtnOutlined';
 import { useNavigate } from 'react-router-dom';
+import OneColumn from '../components/page-sections/OneColumn'
+import BannerBtn from '../components/BannerBtn';
 
 const images = [
     { id: uuid(), url: "/", title: "Some title here", paragraph: "This is the time when something happened.", image: Pic1 },
@@ -239,6 +241,14 @@ export default function Volunteer() {
             </section>
 
 
+            <OneColumn
+                title={"WE’D LOVE TO HAVE YOU!"}
+                subtitle='Join our volunteer list to be notified about upcoming events.'
+                paragraph={[
+                    <BannerBtn name={"JOIN NOW!"} key={uuid()} url={"/contact"}/>
+                ]}
+                className='CallToAction'
+            />
 
             <Footer />
         </div>
