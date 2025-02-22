@@ -15,3 +15,7 @@
     grid-template-rows: repeat(4, 1fr);
     align-self: center;
 }
+
+.MediaGrid .SectionTitle {
+    font-size: clamp(12px, 6vw, 42px);
+}

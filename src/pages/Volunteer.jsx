@@ -27,6 +27,7 @@ import Profile3 from '../assets/profile-3.svg'
 import Profile4 from '../assets/profile-4.svg'
 import Profile5 from '../assets/profile-5.svg'
 import Profile6 from '../assets/profile-6.svg'
+import BannerBackground from '../assets/volunteer-background.svg'
 
 const images = [
     { id: uuid(), url: "/", title: "Some title here", paragraph: "This is the time when something happened.", image: Pic1 },
@@ -44,44 +45,6 @@ const images = [
     { id: uuid(), url: "/", title: "Some title here", paragraph: "This is the time when something happened.", image: Pic13 },
     { id: uuid(), url: "/", title: "Some title here", paragraph: "This is the time when something happened.", image: Pic14 },
 ]
-
-export default function Volunteer() {
-
-    return (
-        <div className="Volunteer">
-            <Navbar />
-            <PageBanner
-                title="BE A VOLUNTEER"
-                description="Your time and compassion is welcome! Join us, and create meaningful memories with our Tails on Camp."
-                background="#5BC0EB"
-            />
-
-            <MediaGrid className="EventsGrid" objArr={
-                images.map((image, i) => (
-                    <ImageCard
-                        key={image.id}
-                        imgSrc={image.image}
-                        paragraph={image.paragraph}
-                        url={image.url}
-                        className={`image-${i}`}
-                    />
-                ))
-            } />
-
-            <section className="TestimonialSection">
-                <Carousel
-                    title={"TESTIMONIAL"}
-                    subtitle={"What the volunteers in our community say"}
-                    articles={testimonies}
-                />
-            </section>
-
-
-            <Footer />
-        </div>
-    )
-}
-
 
 const testimonies = [
     <article className="ArticleContainer" key={uuid()}>
@@ -127,3 +90,73 @@ const testimonies = [
         />
     </article>,
 ]
+
+const bannerStyles = {
+    backgroundImage: `url(${BannerBackground})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+}
+
+export default function Volunteer() {
+
+    return (
+        <div className="Volunteer">
+            <Navbar />
+            <PageBanner
+                title="BE A VOLUNTEER"
+                description="Your time and compassion is welcome! Join us, and create meaningful memories with our Tails on Camp."
+                cssStyles={bannerStyles}
+            />
+
+            <section className="NumbersContainer">
+                <main className="Content">
+                    <div className="Number">
+                        <h1 className="Title">18</h1>
+                        <p className="Description">impact-driven <br />events organized</p>
+                    </div>
+                    <div className="Number">
+                        <h1 className="Title">76</h1>
+                        <p className="Description">dedicated <br />volunteers</p>
+                    </div>
+                    <div className="Number">
+                        <h1 className="Title">132</h1>
+                        <p className="Description">tails rescued from <br />the streets</p>
+                    </div>
+                    <div className="Number">
+                        <h1 className="Title">45</h1>
+                        <p className="Description">adoption matches <br />during our events</p>
+                    </div>
+                </main>
+            </section>
+
+            <MediaGrid className="EventsGrid"
+                title='Our Volunteers in Action'
+                objArr={
+                    images.map((image, i) => (
+                        <ImageCard
+                            key={image.id}
+                            imgSrc={image.image}
+                            paragraph={image.paragraph}
+                            url={image.url}
+                            className={`image-${i}`}
+                        />
+                    ))
+                }
+            />
+
+            <section className="TestimonialSection">
+                <Carousel
+                    title={"TESTIMONIAL"}
+                    subtitle={"What the volunteers in our community say"}
+                    articles={testimonies}
+                />
+            </section>
+
+
+            <Footer />
+        </div>
+    )
+}
+
+
