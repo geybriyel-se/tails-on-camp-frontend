@@ -356,17 +356,17 @@
     color: #F5F5F5;
     text-shadow: 2px 2px 1px #1e1e1e;   
     margin-top: 0;    
+    font-size: clamp(10px, 3vw, 21px);
 }
 
 .Volunteer .CallToAction .BannerBtn {
     background: linear-gradient(0deg, #FFC107 0%, #FFC107 48%, #FFD700 100%);
-    font-size: clamp(12px, 2vw, 16px);
+    font-size: clamp(12px, 2vw, 20px);
 }
 
 .Volunteer .CallToAction .BannerBtn:hover {
     box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
     scale: 1.1;
-    
 }
 
 
