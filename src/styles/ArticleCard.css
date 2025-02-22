@@ -12,6 +12,10 @@
     padding-bottom: 12px;
 }
 
+.ArticleCard .Image img {
+    width: 100%;
+}
+
 .ArticleCard .Divider {
     width: clamp(20%, 30%, 40%);
     border: #ADE237 1px solid;
@@ -58,3 +62,49 @@
     font-size: clamp(20px, 5vw, 30px); 
 }
 
+
+
+/**************************
+*
+*   LANDSCAPE CARD
+*
+**************************/
+
+.LandscapeCard {
+    display: flex;
+    border-bottom: solid 1px #1e1e1e;
+    border-top: solid 1px #1e1e1e;
+    padding: 20px;
+    gap: clamp(10px, 5vw, 40px);
+}
+
+.LandscapeCard .Details .CardTitle {
+    font-family: 'Boogaloo', 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+    font-size: clamp(18px, 3vw, 20px);
+}
+
+.LandscapeCard .Details .CardSubtitle {
+    margin-top: 0;
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+.LandscapeCard .Details .CardParagraph {
+    font-size: clamp(10px, 1vw, 12px);
+}
+
+.LandscapeCard .Image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LandscapeCard .Image img {
+    width: clamp(200px, 30vw, 300px);
+    height: auto;
+    object-fit: cover;
+}
+
+.LandscapeCard .CTA .BtnOutlined {
+    font-size: clamp(12px, 2vw, 14px);
+}
