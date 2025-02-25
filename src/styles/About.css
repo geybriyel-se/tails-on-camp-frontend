@@ -1,0 +1,192 @@
+.About {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.About .PageContent {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    width: 95%;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.About .PageContent .SectionsNav {
+    display: flex;
+    flex-direction: column;
+    width: clamp(200px, 35%, 250px);
+    flex-shrink: 0;
+}
+
+.About .PageContent .SectionsNav ul {
+    position: relative;
+    padding-left: 1rem;
+    position: sticky;
+    top: 80px;
+    z-index: 99;
+}
+
+.About .PageContent .SectionsNav .Line {
+    width: 2px;
+    left: 22px;
+    z-index: 2;
+    height: 100%;
+    border: 1px solid black;
+    background-color: black;
+    position: absolute;
+}
+
+
+.About .PageContent .SectionsNav ul .NavItem {
+    list-style-type: none;
+    font-size: clamp(11px, 2vw, 14px);
+    margin: 20px auto;
+    text-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s all ease-in-out;
+}
+
+.About .PageContent .SectionsNav ul .NavItem .Bullet {
+    z-index: 15;
+    line-height: 1;
+    width: clamp(11px, 2vw, 14px);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #D3D3D3;
+}
+
+.About .PageContent .SectionsNav .NavItem:hover .Bullet {
+    transform: scale(2);
+    transition: 0.3s all ease-in-out;
+    background-color: #C8F542;
+}
+
+.About .PageContent .SectionsNav .NavItem.NavActive .Bullet {
+    transform: scale(2.75);
+    background-color: #ADE237;
+}
+
+.About .PageContent .SectionsNav .NavItem:hover a {
+    transform-origin: left;
+    transform: scale(1.5);
+    transition: 0.3s all ease-in-out;
+}
+
+.About .PageContent .SectionsNav .NavItem.NavActive a {
+    transform-origin: left;
+    transform: scale(2);
+    transition: 0.3s all ease-in-out;
+}
+
+
+.About .PageContent .Main {
+    display: flex;
+    flex-direction: column;
+}
+
+.About .Main .DefaultSection {
+    text-align: left;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+
+.About .Main .DefaultSection .SectionTitle {
+    font-size: clamp(12px, 6vw, 42px);
+    align-self: flex-start;
+    margin: 0;
+}
+
+.About .Main .DefaultSection .SectionParagraph {
+    font-size: clamp(12px, 2vw, 14px);
+    margin: 0;
+}
+
+.About .Main .DefaultSection .SectionSubtitle {
+    align-self: flex-start;
+    margin: 8px auto 8px 0;
+    font-size: clamp(14px, 2.5vw, 18px);
+    color: #eb865b;
+    font-style: italic;
+}
+
+.TeamSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TeamGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    width: 100%;
+}
+
+.TeamGrid .Member:nth-child(1),
+.TeamGrid .Member:nth-child(2),
+.TeamGrid .Member:nth-child(3) {
+    grid-column: span 2;
+}
+
+.TeamGrid .Member:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.TeamGrid .Member:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+.TeamGrid .Member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.TeamGrid img {
+    width: clamp(135px, 20vw, 160px);
+}
+
+.TeamGrid .Role {
+    font-size: clamp(12px, 2vw, 16px);
+    margin-top: 8px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .TeamGrid {
+        display: flex;
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .TeamGrid .Member:nth-child(1),
+    .TeamGrid .Member:nth-child(2),
+    .TeamGrid .Member:nth-child(3),
+    .TeamGrid .Member:nth-child(4),
+    .TeamGrid .Member:nth-child(5) {
+        grid-column: auto;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .TeamGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .TeamGrid .Member {
+        grid-column: span 1;
+    }
+}

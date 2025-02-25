@@ -133,7 +133,7 @@ export default function Donate() {
                 title={"OFFICIAL DONATION CHANNELS"}
                 subtitle={[
                     "For one-time donations, click on the logo of your preferred channel below to view the QR code. ",
-                    <br />,
+                    <br key={uuid()}/>,
                     "For monthly or in-kind donations, select an option below."
                 ]}
                 paragraph={[

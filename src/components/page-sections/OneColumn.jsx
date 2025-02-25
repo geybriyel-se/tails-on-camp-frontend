@@ -1,8 +1,8 @@
 import '../../styles/page-sections/OneColumn.css'
 
-export default function OneColumn({ className = "", title, subtitle = "", paragraph="", imgSrc = "", imgAlt = "" }) {
+export default function OneColumn({ id = "", className = "", title, subtitle = "", paragraph = "", imgSrc = "", imgAlt = "" }) {
     return (
-        <section className={`OneColumn ${className}`}>
+        <section className={`OneColumn ${className}`} id={id && id}>
             <main className="ContentContainer">
                 <h2 className="SectionTitle">{title}</h2>
                 {subtitle !== "" && <h3 className="SectionSubtitle">{subtitle}</h3>}
