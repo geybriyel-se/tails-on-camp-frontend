@@ -12,14 +12,65 @@ import Team5 from '../assets/team-5.svg'
 import Story from '../assets/story.mp4'
 import Divider from '../assets/divider-3.svg'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import Story1 from '../assets/story-1.png'
+import Story2 from '../assets/story-2.png'
+import Story3 from '../assets/story-3.png'
+import Story4 from '../assets/story-4.png'
+import Story5 from '../assets/story-5.png'
+import SpotlightCarousel from '../components/SpotlightCarousel';
+import Footer from '../components/Footer'
+
+const successStories = [
+    {
+        key: uuid(),
+        name: "BELLA",
+        challenge: "Bella was found wandering the streets, skinny and scared, searching for scraps of food. She was wary of people, having likely faced neglect or mistreatment.",
+        response: "Our team rescued Bella, providing her with proper nutrition, medical care, and a safe space to heal. Slowly, she learned to trust again through gentle interresponses and patient training.",
+        outcome: "After weeks of care and rehabilitation, Bella found a loving family that showers her with affection. She now enjoys cozy naps on soft beds and endless belly rubs, far from the harsh life she once knew.",
+        imgSrc: Story1,
+    },
+    {
+        key: uuid(),
+        name: "LILA, LUCKY, and LEO",
+        challenge: "A kind-hearted passerby spotted a cardboard box near a busy highway. Inside were five tiny newborn kittens, crying for their mother. Without immediate help, they wouldn’t survive.",
+        response: "With the support of donations, we bottle-fed them, kept them warm, and gave them the medical care they needed. As they grew stronger, their playful personalities emerged.",
+        outcome: "One by one, they found their forever homes. Now, all five have been adopted into loving families, turning a heartbreaking start into a happy ending, thanks to the support of our amazing community.",
+        imgSrc: Story2,
+    },
+    {
+        key: uuid(),
+        name: "SHADOW",
+        challenge: "When a powerful typhoon hit, Shadow was left behind as floodwaters rose. Stranded on a rooftop for days, he survived on rainwater and scraps until rescuers arrived.",
+        response: "Our team rescued Shadow just in time, providing him with food, shelter, and medical attention. At first, he was anxious and withdrawn, but with love and patience, he slowly regained his trust in people.",
+        outcome: "Shadow is now thriving in his loving forever home, surrounded by a family that will never leave him behind again. His resilience is an inspiration to everyone who meets him.",
+        imgSrc: Story3,
+    },
+    {
+        key: uuid(),
+        name: "WHISKERS",
+        challenge: "Whiskers was just a tiny kitten when he was found shivering under a parked car, dangerously close to traffic. Weak and hungry, he wouldn’t have survived much longer without help.",
+        response: "Whiskers was bottle-fed, nursed back to health, and given a warm, safe space to grow. His once frail body became strong, and his playful nature began to shine.",
+        outcome: "Now a confident and loving cat, Whiskers has been adopted into a home where he spends his days cuddling and chasing toy mice. He went from a lonely street kitten to a cherished family member.",
+        imgSrc: Story4,
+    },
+    {
+        key: uuid(),
+        name: "MILO",
+        challenge: "Milo was rescued in critical condition—weak, malnourished, and suffering from severe mange. His fur was almost gone, and he had wounds from living on the streets for too long. Without urgent care, he wouldn’t have survived.",
+        response: "Thanks to generous donations, Milo received life-saving veterinary treatment, proper nutrition, and daily medicated baths. Slowly, his fur grew back, and his playful personality emerged.",
+        outcome: "Today, Milo is a happy, healthy dog full of energy! He’s ready for adoption and looking for a family to give him the second chance he deserves.",
+        imgSrc: Story5,
+    }
+]
 
 export default function About() {
     /* 
+    *   FOR SECTION NAV
     *   Adding class when section is active
     */
-    
+
     const [activeSection, setActiveSection] = useState("");
-    
+
     useEffect(() => {
         const sections = [...document.querySelectorAll("section")].filter(section => section.id !== "")
 
@@ -48,9 +99,10 @@ export default function About() {
 
 
     /* 
+    *   FOR SECTION NAV
     *   Allow shrinking only when Page Banner is no longer visible
     */
-    
+
     const [startShrink, setStartShrink] = useState(false);
 
     useEffect(() => {
@@ -80,9 +132,10 @@ export default function About() {
 
 
     /* 
+    *   FOR SECTION NAV
     *   Shrink on scroll only if shrinking is allowed
     */
-    
+
     const [isShrunk, setIsShrunk] = useState(false);
     const lastScrollY = useRef(0);
 
@@ -103,6 +156,7 @@ export default function About() {
             window.removeEventListener("scroll", handleScroll);
         };
     }, [startShrink]);
+
 
     return (
         <div className="About">
@@ -146,7 +200,7 @@ export default function About() {
                             title={"Vision"}
                             subtitle='A world where kindness isn’t just a word, but a promise to every stray in need.'
                             paragraph={[
-                                "We believe kindness should be more than just a word—it should be a commitment. At Tails on Camp, we dedicate ourselves to rescuing, rehabilitating, and rehoming stray animals, ensuring they receive the love, care, and second chances they deserve. Through community efforts, responsible adoption, and unwavering compassion, we turn kindness into action—one stray at a time.",
+                                "We believe kindness should be more than just a word—it should be a commitment. At Tails on Camp, we dedicate ourselves to rescuing, rehabilitating, and rehoming stray animals, ensuring they receive the love, care, and second chances they deserve. Through community efforts, responsible adoption, and unwavering compassion, we turn kindness into response—one stray at a time.",
                             ]}
                             className='DefaultSection'
                         />
@@ -175,9 +229,21 @@ export default function About() {
                             </figure>
                             <figure className="Member">
                                 <img src={Team5} alt="Team member 5" />
-                                <p className="Role">Social Media and Outreachr</p>
+                                <p className="Role">Social Media and Outreach</p>
                             </figure>
                         </article>
+                    </section>
+
+                    <img src={Divider} alt="Page divider" className='Divider' />
+                    
+                    <section className="DefaultSection Success" id='Success'>
+                        <h2 className="SectionTitle">Success Stories</h2>
+                        <div className="StoriesWrapper">
+                            <SpotlightCarousel
+                                articles={successStories}
+                                className='StoriesCarousel'
+                            />
+                        </div>
                     </section>
                 </main>
 
@@ -231,6 +297,8 @@ export default function About() {
                     </nav>
                 </aside>
             </div>
+            <Footer />
         </div>
     )
 }
+

@@ -76,21 +76,6 @@ export default function Home() {
 
             />
 
-            {/* <TwoColumns
-                className={"AboutSection"}
-                title={"Tails on Camp: A Safe Haven for Strays"}
-                paragraph={[
-                    "At Tails on Camp, we believe every stray deserves a loving home. Our mission is to provide rescue, rehabilitation, and rehoming for animals in need. From medical care to foster programs, we work tirelessly to give these animals a second chance at life.",
-                    <br key="LineBreak" />,
-                    <br key="LineBreak" />,
-                    "With the help of volunteers and supporters, we provide a safe space where strays can heal, thrive, and find loving homes."
-                ]}
-                imgSrc={CatsImage}
-                imgAlt='Kittens'
-            >
-                <BtnOutlined name={"LEARN MORE"} url={""} />
-            </TwoColumns> */}
-
             <TwoColumns
                 className='AboutSection'
                 childrenL={[
@@ -99,16 +84,14 @@ export default function Home() {
                 titleR='Tails on Camp: A Safe Haven for Strays'
                 childrenR={[
                     "At Tails on Camp, we believe every stray deserves a loving home. Our mission is to provide rescue, rehabilitation, and rehoming for animals in need. From medical care to foster programs, we work tirelessly to give these animals a second chance at life.",
-                    <br key="LineBreak" />,
-                    <br key="LineBreak" />,
+                    <br className="LineBreak" key={uuid()}/>,
+                    <br className="LineBreak" key={uuid()}/>,
                     "With the help of volunteers and supporters, we provide a safe space where strays can heal, thrive, and find loving homes.",
                     <BtnOutlined name={"LEARN MORE"} url={""} className={"BtnAbout"} key={uuid()} />
                 ]}
             >
 
             </TwoColumns>
-
-
 
             <TwoColumns
                 className='DogWithBanner'
