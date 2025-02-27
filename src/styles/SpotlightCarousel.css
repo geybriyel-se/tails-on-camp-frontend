@@ -166,7 +166,13 @@
         left: auto;
         padding: 0;
     }
-
+    
+    .SpotlightCarousel .CardCaption {
+        /* background-color: #5BC0EB; */
+        gap: 25px;
+        padding-left: 20px;
+    }
+    
     .SpotlightCarousel .NavBtn {
         position: absolute;
         top: 25%;
@@ -184,6 +190,7 @@
 
 
 @media (max-width: 670px) {
+
     .SpotlightCarousel .CardCaption {
         width: 100%;
         display: flex;

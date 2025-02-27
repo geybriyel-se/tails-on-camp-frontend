@@ -235,15 +235,13 @@ export default function About() {
                     </section>
 
                     <img src={Divider} alt="Page divider" className='Divider' />
-                    
-                    <section className="DefaultSection Success" id='Success'>
+
+                    <section className="DefaultSection Success" id='Stories'>
                         <h2 className="SectionTitle">Success Stories</h2>
-                        <div className="StoriesWrapper">
-                            <SpotlightCarousel
-                                articles={successStories}
-                                className='StoriesCarousel'
-                            />
-                        </div>
+                        <SpotlightCarousel
+                            articles={successStories}
+                            className='StoriesCarousel'
+                        />
                     </section>
                 </main>
 
