@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import '../styles/Adopt.css';
 import PetButton from "../components/PetButton";
@@ -10,7 +9,6 @@ import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
 import { useState } from "react";
 import PageBanner from "../components/PageBanner";
-import BannerBtn from "../components/BannerBtn";
 import PetCard from "../components/PetCard";
 
 export default function Adopt() {
