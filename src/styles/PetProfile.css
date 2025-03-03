@@ -1,0 +1,219 @@
+.PetProfile {
+    background-color: #F1F8FD;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.PetProfile .Content {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 90%;
+    margin: 55px auto;
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+.PetProfile .MorePetInfo {
+    display: flex;
+    flex-direction: column;
+    align-items:  flex-end;
+}
+
+.PetProfile .MyStory {
+    margin: 0;
+    width: 95%;
+    background-color: #FCFCFC;
+    padding: 20px;
+}
+
+.PetProfile .MyStory .SectionTitle {
+    margin: 0;
+    align-self: flex-start;
+    font-family: inherit;
+    font-size: clamp(20px, 6vw, 32px);
+} 
+
+.PetProfile .MyStory .SectionParagraph {
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+.PetProfile .SameShelter,
+.PetProfile .TabContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #FCFCFC;
+    padding: 20px;
+    width: 95%;
+    margin-top: 25px;
+}
+
+.PetProfile .PetDetailsNav {
+    display: flex;
+}
+
+.PetDetailsNav .Btn-Tab {
+    line-height: 2;
+    border: none;
+    background-color: transparent;
+    color: #727272;
+    cursor: pointer;
+}
+
+.PetDetailsNav .tabActive {
+    color: #1e1e1e;
+}
+
+.PetProfile .PetDetailsNav .HealthNav {
+    border-right: 1.5px solid #D2D2D2;
+    padding-right: 16px;
+}
+
+.PetProfile .PetDetailsNav .ShelterNav {
+    padding-left: 16px;
+}
+
+.PetProfile .TabContainer .TabInfo {
+    padding: 15px;
+    display: none;
+}
+
+.PetProfile .TabContainer .TabInfo.groupActive {
+    display: block;
+}
+
+.PetProfile .TabContainer .TabInfo .TwoColumns {
+    margin: 0;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.PetProfile .TabContainer .TabInfo .TwoColumns .Container {
+    padding: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.PetProfile .TabContainer .TabInfo .SectionTitle {
+    font-family: inherit;
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+.PetProfile .TabInfo .Options {
+    display: flex;
+    gap: min(6px);
+    flex-wrap: wrap;
+}
+
+.PetProfile .TabInfo .Container .SectionTitle {
+    margin: 15px 0 5px 0;
+}
+
+.PetProfile .TabContainer .CheckboxItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.PetProfile .TabContainer .CheckboxItem input {
+    appearance: none;
+    width: clamp(14px, 2.5vw, 18px);
+    height: clamp(14px, 2.5vw, 18px);
+    border-radius: 50%;
+    border: 2px solid #ccc; /* Lighter border to indicate it's non-interactive */
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+    opacity: 0.6; /* Slightly faded to show it's disabled */
+}
+
+.PetProfile .TabContainer .CheckboxItem input:checked {
+    background-color: #5BC0EB;
+    border-color: #5BC0EB;
+    opacity: 1;
+}
+
+.PetProfile .TabContainer .CheckboxItem label {
+    font-size: clamp(12px, 2vw, 14px);
+    color: #999; 
+    cursor: not-allowed; 
+    opacity: 0.6;
+}
+
+.PetProfile .TabContainer .CheckboxItem input:checked + label {
+    color: #1e1e1e;
+}
+
+.PetProfile .TabContainer .TwoColumns li {
+    font-size: clamp(12px, 2vw, 14px);
+
+}
+
+.PetProfile .TabContainer .ShelterTab .SectionTitle {
+    font-family: 'Boogaloo', 'Trebuchet MS', sans-serif;
+    font-size: clamp(20px, 6vw, 32px);
+}
+
+
+.PetProfile .ShelterTab .ContactDetails {
+    display: flex;
+    justify-content: space-between;
+    gap: min(4px);
+    flex-wrap: wrap;
+}
+
+.PetProfile .ShelterTab .ContactDetails > * {
+    margin-bottom: 0;
+}
+
+.PetProfile .SameShelter {
+    background-color: transparent;
+    padding: 0;
+}
+
+.PetProfile .SameShelter .SectionTitle {
+    font-family: inherit;
+    margin: 0;
+    margin-bottom: 14px;
+    font-size: clamp(12px, 5vw, 24px);
+}
+
+.PetProfile .SameShelter .Gallery {
+    width: 100%;
+    margin: 0;
+    justify-content: flex-start;
+}
+
+.PetProfile .SameShelter .ProfileGallery {
+    justify-content: flex-start;
+}
+
+.PetProfile .SameShelter .ProfileGallery > * {
+    width: clamp(160px, 20vw, 180px);
+    height: clamp(185px, 25vw, 200px);
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.PetProfile .SameShelter .ProfileGallery img {
+    border-radius: 0;
+}
+
+.PetProfile .SameShelter .ProfileGallery .Size {
+    display: none;
+}
+
+.PetProfile .SameShelter .ProfileGallery .Age,
+.PetProfile .SameShelter .ProfileGallery .Gender {
+    margin: 0;
+    align-self: center;
+    justify-content: center;
+}
+
+.PetProfile .SameShelter .ProfileGallery .Gender {
+    display: flex;
+
+}
