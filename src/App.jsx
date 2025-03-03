@@ -11,6 +11,7 @@ import Donate from './pages/Donate'
 import Volunteer from './pages/Volunteer'
 import Bulletin from './pages/Bulletin'
 import Contact from './pages/Contact'
+import PetProfile from './pages/PetProfile'
 
 
 
@@ -48,6 +49,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/bulletin' element={<Bulletin />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/pets/:id' element={<PetProfile />} />
         </Routes>
       </BrowserRouter>
 

@@ -10,21 +10,31 @@ import Footer from "../components/Footer";
 import { useState } from "react";
 import PageBanner from "../components/PageBanner";
 import PetCard from "../components/PetCard";
+import { useNavigate } from "react-router-dom";
+
+const bannerStyles = {
+    background: "linear-gradient(#5BC0EB, 65%, #FFFFFF)",
+}
+
+
 
 export default function Adopt() {
 
+    // for styling active Pet Type button
     const [activeBtn, setActiveBtn] = useState("ALL");
-
     function handleClick(button) {
         setActiveBtn(button);
     }
 
-    const bannerStyles = {
-        background: "linear-gradient(#5BC0EB, 65%, #FFFFFF)",
-    }
-
-
+    // creating card for each pet object from API
     const cards = makeCards(getDataFromAPI());
+    
+    // redirecting user to pet profile based on id
+    const navigate = useNavigate();
+    function goToPetProfile({ id }) {
+        // navigate(`/pets/id/${id}`)
+        navigate(`/pets/id/54`)
+    }
 
     return (
         <main className="Adopt">
@@ -774,7 +784,7 @@ function getDataFromAPI() {
     return res.body;
 }
 
-function makeCards(arr) {
+export function makeCards(arr) {
     return arr.map((obj) => (
         <PetCard
             key={obj.id}
@@ -783,8 +793,10 @@ function makeCards(arr) {
             size={obj.size}
             gender={obj.gender}
             img={obj.imageUrl}
+            id={obj.id}
         />
     ));
 }
 
 
+//path for getting pet details by id:  /api/v1/pets/id/54

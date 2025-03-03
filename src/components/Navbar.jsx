@@ -29,7 +29,7 @@ export default function Navbar() {
     return (
         <nav className="Navbar">
             <button className='DrawerButton' onClick={toggleDrawer(true)}>☰</button>
-            <div className="Content">
+            <div className="NavContent">
                 <Link to="/home" className='LogoLinkContainer'><img src={logo} alt="Tails on Camp logo and brand name" className='NavLogo' /></Link>
                 <NavLinkContainer menuLink={
                     links.map(v => (
