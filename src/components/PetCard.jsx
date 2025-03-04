@@ -1,11 +1,13 @@
 import '../styles/PetCard.css'
 import male from '../assets/male.svg'
 import female from '../assets/female.svg'
+import { useNavigate } from 'react-router-dom'
 
-export default function PetCard({ name, img, gender, age, size }) {
+export default function PetCard({ name, img, gender, age, size, id }) {
+    const navigate = useNavigate();
 
     return (
-        <div className="PetCard">
+        <div className="PetCard" onClick={() => navigate(`/pets/${id}`)}>
             <img src={img} className='Image' />
             <div className="CardCaption">
                 <div className="TextInfo">

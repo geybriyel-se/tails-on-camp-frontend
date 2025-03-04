@@ -1,0 +1,114 @@
+.ProfileSidebar {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    padding-top: 0;
+    align-items: center;
+    background-color: #FCFCFC;
+    padding-bottom: 40px;
+}
+
+.ProfileSidebar .Picture {
+    margin: 0;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.ProfileSidebar .Picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.QuickInfo {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.Shelter {
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+.PetName {
+    font-family: 'Boogaloo', 'Trebuchet MS', sans-serif;
+    font-size: clamp(12px, 6vw, 42px);
+    margin: 0;
+    margin-top: 20px;
+    line-height: 1;
+}
+
+.ProfileSidebar .Buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    flex-wrap: wrap;
+    gap: min(5px);
+    align-items: center;
+    justify-content: center;
+}
+
+.BtnSidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Boogaloo', 'Trebuchet MS', sans-serif;
+    font-size: clamp(14px, 4vw, 20px);
+    gap: 8px;
+    background-color: #ADE237;
+    border: none;
+    border-radius: 8px;
+    width: 75%;
+}
+
+.Btn-Tab {
+    /* min-width: 130px */
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+.Btn-Adopt {
+    min-width: 85px;
+    height: clamp(24px, 4vh, 30px);
+    font-size: clamp(10px, 3vw, 20px);
+}
+
+.Btn-Mail {
+    background-color: #D7D7D7;
+    width: 18%;
+    padding: 0.3em;
+    aspect-ratio: 1/1;
+    min-width: 30px
+}
+
+.ProfileSidebar .Divider {
+    color: #D5D5D5;
+    width: 45%;
+    margin: clamp(10px, 5vw, 40px);
+}
+
+.LineDetail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.LineKey {
+    color: #A5A5A5;
+}
+
+.ProfileSidebar .More p {
+    margin: 0;
+}
+
+
+@media (max-width: 850px) {
+    .LineDetail {
+        grid-template-columns: 1fr;
+        gap: 1px;
+        margin-bottom: 8px;
+    }
+}

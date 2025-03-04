@@ -5,6 +5,7 @@
     background-color: #FFFFFF;
     box-shadow: 8px 8px 8px #00000018;
     margin-bottom: 30px;
+    transition: 0.2s ease;
 }
 
 .PetCard .Image {
@@ -50,3 +51,9 @@
     font-weight: 300;
 }
 
+.PetCard:hover {
+    transform: scale(1.05);
+    box-shadow: 12px 12px 12px #00000030;
+    filter: brightness(90%);
+    cursor: pointer;
+}

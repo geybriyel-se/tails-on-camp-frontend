@@ -11,7 +11,7 @@
     top: 0;
 }
 
-.Navbar .Content {
+.Navbar .NavContent {
     max-width: 1200px;
     width: 100%;
     display: flex;
@@ -141,7 +141,7 @@
 
     
 
-    .Navbar .Content {
+    .Navbar .NavContent {
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -149,7 +149,7 @@
         padding-left: 45px;
     }
 
-    .Content .LogoLinkContainer {
+    .NavContent .LogoLinkContainer {
         height: 100%;
         display: flex;
     }

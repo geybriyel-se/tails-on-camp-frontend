@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import '../styles/Adopt.css';
 import PetButton from "../components/PetButton";
@@ -131,4 +130,16 @@ async function apiCall() {
 
 }
 
-
+export function makeCards(arr) {
+    return arr.map((obj) => (
+        <PetCard
+            key={obj.id}
+            name={obj.name}
+            age={obj.age}
+            size={obj.size}
+            gender={obj.gender}
+            img={obj.imageUrl}
+            id={obj.id}
+        />
+    ));
+}
