@@ -93,6 +93,13 @@ export default function Adopt() {
 // const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
 async function getDataFromAPI() {
+    const dataResponse = await apiCall();
+    return dataResponse.body;
+}
+
+// const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
+async function apiCall() {
     let config = {
         method: 'get',
         maxBodyLength: Infinity,

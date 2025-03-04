@@ -1,6 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/brand.svg'
-import logo1 from '../assets/logo-1.svg'
 import '../styles/Navbar.css'
 import { useState } from 'react'
 import { Drawer } from '@mui/material';
@@ -46,7 +45,6 @@ export default function Navbar() {
 
                 <Drawer open={showDrawer}
                     onClose={toggleDrawer(false)}
-                    // anchor='right'
                     className='NavDrawer'
                     PaperProps={{
                         sx: {
@@ -75,7 +73,7 @@ export default function Navbar() {
 
                 <div className="NavAccount">
                     {/* <Link to="/register"><button className='NavAccountBtn NavAccountBtnRegister'>REGISTER</button></Link> */}
-                    <Link to="/"><button className='NavAccountBtn'>LOGIN</button></Link>
+                    <Link to="/login"><button className='NavAccountBtn'>LOGIN</button></Link>
                 </div>
 
             </div>
