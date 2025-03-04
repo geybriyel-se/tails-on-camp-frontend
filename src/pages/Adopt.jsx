@@ -25,23 +25,12 @@ export default function Adopt() {
 
         fetchData();
     }, [])
-    
+
     const [petArr, setPetArr] = useState([]);
-    function makeCards(arr) {
-        return arr.map((obj) => (
-            <PetCard
-                key={obj.id}
-                name={obj.name}
-                age={obj.age}
-                size={obj.size}
-                gender={obj.gender}
-                img={obj.imageUrl}
-            />
-        ));
-    }
+    
 
     const cards = makeCards(petArr);
-    
+
     const [activeBtn, setActiveBtn] = useState("ALL");
     function handleClick(button) {
         setActiveBtn(button);
@@ -50,8 +39,6 @@ export default function Adopt() {
     const bannerStyles = {
         background: "linear-gradient(#5BC0EB, 65%, #FFFFFF)",
     }
-
-
 
     return (
         <main className="Adopt">
@@ -103,18 +90,14 @@ export default function Adopt() {
     )
 }
 
+// const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
 async function getDataFromAPI() {
-    const dataResponse = await apiCall();
-    return dataResponse.body;
-}
-
-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
-
-async function apiCall() {
     let config = {
         method: 'get',
         maxBodyLength: Infinity,
-        url: `${apiBaseUrl}/pets/all`,
+        // url: `${apiBaseUrl}/pets/all`,
+        url: `http://localhost:8080/api/v1/pets/all`,
         headers: {
             'Content-Type': 'application/json'
         },
@@ -122,10 +105,10 @@ async function apiCall() {
 
     try {
         const response = await axios.request(config);
-        return response.data;  
+        return response.data.body;
     } catch (error) {
         console.log("ERROR!!!!", error);
-        throw error;  
+        throw error;
     }
 
 }
