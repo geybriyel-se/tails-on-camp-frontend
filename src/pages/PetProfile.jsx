@@ -1,16 +1,15 @@
 import { useParams } from "react-router-dom";
-import ArticleCard from "../components/ArticleCard";
 import Navbar from "../components/Navbar";
 import ProfileSidebar from "../components/ProfileSidebar";
 import '../styles/PetProfile.css'
 import OneColumn from "../components/page-sections/OneColumn";
 import TwoColumns from "../components/page-sections/TwoColumns";
-import { v4 as uuid } from 'uuid';
-import { act, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
 import { makeCards } from "./Adopt";
 import axios from "axios";
+import Loading from "../components/page-sections/Loading";
 
 
 export default function PetProfile() {
@@ -43,7 +42,7 @@ export default function PetProfile() {
 
     return (
         <>
-            {isLoading ? <p>Loading...</p> :
+            {isLoading ? <Loading /> :
                 <main className="PetProfile">
                     <Navbar />
                     <article className="Content">

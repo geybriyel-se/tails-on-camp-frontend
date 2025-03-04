@@ -11,8 +11,11 @@ import { useEffect, useState } from "react";
 import PageBanner from "../components/PageBanner";
 import PetCard from "../components/PetCard";
 import axios from "axios";
+import Loading from "../components/page-sections/Loading";
 
 export default function Adopt() {
+    const [isLoading, setIsLoading] = useState(true);
+
     useEffect(() => {
         async function fetchData() {
             try {
@@ -20,16 +23,15 @@ export default function Adopt() {
                 setPetArr(data);
             } catch (error) {
                 console.error("Error fetching data", error);
+            } finally {
+                setIsLoading(false);
             }
         }
 
         fetchData();
     }, [])
 
-    const [petArr, setPetArr] = useState([]);
-    
-
-    const cards = makeCards(petArr);
+    const [petArr, setPetArr] = useState();
 
     const [activeBtn, setActiveBtn] = useState("ALL");
     function handleClick(button) {
@@ -41,66 +43,63 @@ export default function Adopt() {
     }
 
     return (
-        <main className="Adopt">
-            <Navbar />
-            <PageBanner
-                title={"MEET THE TAILS ON CAMP"}
-                description={"Discover your new best friend in our pet gallery! Here, you’ll find loving animals of all shapes and sizes, each waiting for a forever home."}
-                cssStyles={bannerStyles}
-            >
-            </PageBanner>
+        <>
+            {isLoading ? <Loading /> :
+                <main className="Adopt">
+                    <Navbar />
+                    <PageBanner
+                        title={"MEET THE TAILS ON CAMP"}
+                        description={"Discover your new best friend in our pet gallery! Here, you’ll find loving animals of all shapes and sizes, each waiting for a forever home."}
+                        cssStyles={bannerStyles}
+                    >
+                    </PageBanner>
 
-            <nav className="PetButtonsContainer">
-                <PetButton
-                    name="ALL"
-                    imgSrc={paw}
-                    className="PetButtonAll"
-                    imgAlt="Paw icon"
-                    isActive={activeBtn === "ALL" ? true : false}
-                    onClick={() => handleClick("ALL")}
-                />
-                <PetButton
-                    name="DOGS"
-                    imgSrc={dog}
-                    className="PetButtonDogs"
-                    imgAlt="Dog icon"
-                    isActive={activeBtn === "DOGS" ? true : false}
-                    onClick={() => handleClick("DOGS")}
-                />
-                <PetButton
-                    name="CATS"
-                    imgSrc={cat}
-                    className="PetButtonCats"
-                    imgAlt="Cat icon"
-                    isActive={activeBtn === "CATS" ? true : false}
-                    onClick={() => handleClick("CATS")}
-                />
-                <PetButton
-                    name="OTHERS"
-                    imgSrc={rabbit}
-                    className="PetButtonOthers"
-                    imgAlt="Rabbit icon"
-                    isActive={activeBtn === "OTHERS" ? true : false}
-                    onClick={() => handleClick("OTHERS")}
-                />
-            </nav>
-            <Gallery cards={cards} />
-            <Footer />
-        </main>
+                    <nav className="PetButtonsContainer">
+                        <PetButton
+                            name="ALL"
+                            imgSrc={paw}
+                            className="PetButtonAll"
+                            imgAlt="Paw icon"
+                            isActive={activeBtn === "ALL" ? true : false}
+                            onClick={() => handleClick("ALL")}
+                        />
+                        <PetButton
+                            name="DOGS"
+                            imgSrc={dog}
+                            className="PetButtonDogs"
+                            imgAlt="Dog icon"
+                            isActive={activeBtn === "DOGS" ? true : false}
+                            onClick={() => handleClick("DOGS")}
+                        />
+                        <PetButton
+                            name="CATS"
+                            imgSrc={cat}
+                            className="PetButtonCats"
+                            imgAlt="Cat icon"
+                            isActive={activeBtn === "CATS" ? true : false}
+                            onClick={() => handleClick("CATS")}
+                        />
+                        <PetButton
+                            name="OTHERS"
+                            imgSrc={rabbit}
+                            className="PetButtonOthers"
+                            imgAlt="Rabbit icon"
+                            isActive={activeBtn === "OTHERS" ? true : false}
+                            onClick={() => handleClick("OTHERS")}
+                        />
+                    </nav>
+                    <Gallery cards={makeCards(petArr)} />
+                    <Footer />
+                </main>
+            }
+        </>
     )
 }
 
-// const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
+// const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 async function getDataFromAPI() {
-    const dataResponse = await apiCall();
-    return dataResponse.body;
-}
-
-// const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
-
-async function apiCall() {
-    let config = {
+    const config = {
         method: 'get',
         maxBodyLength: Infinity,
         // url: `${apiBaseUrl}/pets/all`,
@@ -117,8 +116,9 @@ async function apiCall() {
         console.log("ERROR!!!!", error);
         throw error;
     }
-
 }
+
+
 
 export function makeCards(arr) {
     return arr.map((obj) => (
