@@ -18,3 +18,7 @@ a:hover {
 html {
     scroll-behavior: smooth;
 }
+
+html body {
+    background-color: #F8F8F8;
+}

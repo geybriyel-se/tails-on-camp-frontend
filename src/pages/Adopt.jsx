@@ -12,12 +12,6 @@ import PageBanner from "../components/PageBanner";
 import PetCard from "../components/PetCard";
 import { useNavigate } from "react-router-dom";
 
-const bannerStyles = {
-    background: "linear-gradient(#5BC0EB, 65%, #FFFFFF)",
-}
-
-
-
 export default function Adopt() {
 
     // for styling active Pet Type button
@@ -42,7 +36,6 @@ export default function Adopt() {
             <PageBanner
                 title={"MEET THE TAILS ON CAMP"}
                 description={"Discover your new best friend in our pet gallery! Here, you’ll find loving animals of all shapes and sizes, each waiting for a forever home."}
-                cssStyles={bannerStyles}
             >
             </PageBanner>
 

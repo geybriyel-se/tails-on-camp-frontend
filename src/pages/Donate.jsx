@@ -24,9 +24,6 @@ import QrPaypal from '../assets/qr-paypal.png'
 import { useState } from "react";
 import BannerBtn from "../components/BannerBtn";
 
-const bannerStyles = {
-    background: "linear-gradient(#5BC0EB, 65%, #FFFFFF)",
-}
 
 const leftColumn = [
     <p key={uuid()} className="ItemNumber">
@@ -108,7 +105,6 @@ export default function Donate() {
             <PageBanner
                 title="MAKE A DONATION"
                 description="Your generosity makes a difference! Every donation helps provide food, shelter, and medical care for rescue animals in need."
-                cssStyles={bannerStyles}
             />
 
             <OneColumn

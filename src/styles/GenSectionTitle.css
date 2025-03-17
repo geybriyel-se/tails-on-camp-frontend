@@ -1,0 +1,26 @@
+.GenSectionTitle {
+    margin: 40px 0;
+}
+
+.GenSectionTitle .Texts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.GenSectionTitle .Texts .Title {
+    font-family: 'Boogaloo', 'Trebuchet MS', sans-serif;
+    font-size: clamp(12px, 6vw, 42px);
+    margin: 0;
+}
+
+.GenSectionTitle .Texts .More {
+    font-size: clamp(8px, 3vw, 20px);
+    cursor: pointer;
+}
+
+.GenSectionTitle hr {
+    height: 1px;
+    border: none;
+    background-color: black; 
+}

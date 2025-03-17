@@ -11,11 +11,12 @@ export default function ImageCard({
     url = "",
     icon = <InfoIcon sx={{ color: "#b7b7b7", fontSize: "1.4em" }} />,
     className = "",
+    onClickUrl=""
 }) {
     const navigate = useNavigate();
 
     return (
-        <article className={`ImageCard ${className}`}>
+        <article className={`ImageCard ${className}`} onClick={onClickUrl ? () => navigate(onClickUrl) : undefined}>
             <div className="ImageContainer">
                 <img src={imgSrc} alt={`Image for ${title}`} className="Image" />
             </div>

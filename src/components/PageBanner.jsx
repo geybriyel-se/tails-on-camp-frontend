@@ -1,7 +1,7 @@
 import '../styles/PageBanner.css'
 
 const bannerStyles = {
-    background: "linear-gradient(#5BC0EB, 65%, #FFFFFF)",
+    // background: "linear-gradient(#5BC0EB, 75%, #F8F8F8)",
 }
 
 export default function PageBanner({ id = "", title, description, cssStyles = bannerStyles, children }) {
