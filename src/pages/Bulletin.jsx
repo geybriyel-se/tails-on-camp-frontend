@@ -11,7 +11,6 @@ import Footer from "../components/Footer";
 import ALL_PETS from "../constants/SampleReponses";
 import ProfileSidebar from "../components/ProfileSidebar";
 import { v4 as uuid } from "uuid";
-import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import ArticleCard from "../components/ArticleCard"
 import Event1 from '../assets/event-1.png'

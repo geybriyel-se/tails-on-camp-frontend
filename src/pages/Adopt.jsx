@@ -1,3 +1,4 @@
+/* eslint-disable no-loss-of-precision */
 import Navbar from "../components/Navbar";
 import '../styles/Adopt.css';
 import PetButton from "../components/PetButton";
@@ -11,9 +12,9 @@ import { useState } from "react";
 import PageBanner from "../components/PageBanner";
 import PetCard from "../components/PetCard";
 import { useNavigate } from "react-router-dom";
+import ALL_PETS, { RES_PET_TYPE_DOG, RES_PET_TYPE_CAT, RES_PET_TYPE_OTHERS } from "../constants/SampleReponses";
 
 export default function Adopt() {
-
     // for styling active Pet Type button
     const [activeBtn, setActiveBtn] = useState("ALL");
     function handleClick(button) {
@@ -21,14 +22,17 @@ export default function Adopt() {
     }
 
     // creating card for each pet object from API
-    const cards = makeCards(getDataFromAPI());
-    
+    const all = makeCards(getDataFromAPI());
+    const dogs = makeCards(getPetsByTypeFromAPI('Dog'));
+    const cats = makeCards(getPetsByTypeFromAPI('Cat'));
+    const others = makeCards(getPetsByTypeFromAPI('Others'));
+
     // redirecting user to pet profile based on id
     const navigate = useNavigate();
-    function goToPetProfile({ id }) {
-        // navigate(`/pets/id/${id}`)
-        navigate(`/pets/id/54`)
-    }
+    // function goToPetProfile({ id }) {
+    //     // navigate(`/pets/id/${id}`)
+    //     navigate(`/pets/id/54`)
+    // }
 
     return (
         <main className="Adopt">
@@ -73,7 +77,11 @@ export default function Adopt() {
                     onClick={() => handleClick("OTHERS")}
                 />
             </nav>
-            <Gallery cards={cards} />
+
+            {activeBtn === "ALL" && <Gallery cards={all} />}
+            {activeBtn === "DOGS" && <Gallery cards={dogs} />}
+            {activeBtn === "CATS" && <Gallery cards={cats} />}
+            {activeBtn === "OTHERS" && <Gallery cards={others} />}
             <Footer />
         </main>
     )
@@ -793,3 +801,19 @@ export function makeCards(arr) {
 
 
 //path for getting pet details by id:  /api/v1/pets/id/54
+
+function getPetsByTypeFromAPI(type) {
+    if (type === 'Dog') {
+        return RES_PET_TYPE_DOG.body;
+    } else if (type === 'Cat') {
+        return RES_PET_TYPE_CAT.body;
+    } else if (type === 'Others') {
+        return RES_PET_TYPE_OTHERS.body;
+    } else {
+        return ALL_PETS;
+    }
+}
+
+// function getPetsByType(type) {
+//     getPetsByTypeFromAPI(type);
+// }

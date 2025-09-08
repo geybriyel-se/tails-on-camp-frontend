@@ -259,13 +259,14 @@
 .Bulletin .Reports .ReportsList .ReportItem .Date {
     text-align: right;
     color: #666;
+    font-size: clamp(8px, 2vw, 14px);
 }
 
 .Bulletin .ReportsList .ReportItem .Tag {
-    background-color: salmon;
     width: max-content;
     padding: 0.25em 0.5em;
     border-radius: 10px;
+    font-size: clamp(8px, 2vw, 14px);
 }
 
 .Bulletin .ReportsList .ReportItem .Tag-Financial {
