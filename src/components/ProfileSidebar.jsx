@@ -1,7 +1,7 @@
 import { CottageOutlined, EmailOutlined } from '@mui/icons-material'
 import '../styles/ProfileSidebar.css'
 
-export default function ProfileSidebar({ className = "", imgSrc, name, age, gender, breed, size, type, shelterName, shelterCity }) {
+export default function ProfileSidebar({ className = "", imgSrc, name, age, gender, breed, size, type, shelterName, shelterCity, onClick }) {
     return (
         <aside className={`ProfileSidebar ${className}`}>
             <figure className="Picture">
@@ -11,7 +11,7 @@ export default function ProfileSidebar({ className = "", imgSrc, name, age, gend
                 <h2 className="PetName">{name}</h2>
                 <p className="Shelter">{`📍 ${shelterName}, ${shelterCity}`}</p>
                 <div className="Buttons">
-                    <button className='BtnSidebar Btn-Adopt'><CottageOutlined /> Adopt</button>
+                    <button className='BtnSidebar Btn-Adopt' onClick={onClick}><CottageOutlined /> Adopt</button>
                     <button className='BtnSidebar Btn-Mail'><EmailOutlined /></button>
                 </div>
             </article>

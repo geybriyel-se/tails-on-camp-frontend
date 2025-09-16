@@ -1,0 +1,7 @@
+.LogoOnly {
+    align-self: center;
+}
+
+.LogoOnly img {
+    width: clamp(75px, 8vw, 100px);
+}

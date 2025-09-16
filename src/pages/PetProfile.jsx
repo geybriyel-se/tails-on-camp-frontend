@@ -1,15 +1,14 @@
 import { useParams } from "react-router-dom";
-import ArticleCard from "../components/ArticleCard";
 import Navbar from "../components/Navbar";
 import ProfileSidebar from "../components/ProfileSidebar";
 import '../styles/PetProfile.css'
 import OneColumn from "../components/page-sections/OneColumn";
 import TwoColumns from "../components/page-sections/TwoColumns";
-import { v4 as uuid } from 'uuid';
-import { act, useState } from "react";
+import { useState } from "react";
 import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
 import { makeCards } from "./Adopt";
+import AuthDialog from "../components/AuthDialog";
 
 
 export default function PetProfile() {
@@ -25,6 +24,21 @@ export default function PetProfile() {
     const otherPets = getPetsByShelterId(petObj.shelter.shelterId, petObj.id);
     const petsByShelter = makeCards(otherPets);
 
+    // for login/register modal after clicking Adopt btn
+    const [openOverlay, setOpenOverlay] = useState(false);
+    // const [overlayID, setOverlayID] = useState(channels[0].key)
+    // const [overlayID, setOverlayID] = useState(1)
+
+    const handleOpen = () => {
+        // setOverlayID(id)
+        setOpenOverlay(true);
+    }
+
+    const handleClose = () => {
+        setOpenOverlay(false);
+    };
+
+
     return (
         <main className="PetProfile">
             <Navbar />
@@ -39,6 +53,7 @@ export default function PetProfile() {
                     type={petObj.type}
                     shelterName={petObj.shelter.shelterName}
                     shelterCity={petObj.shelter.city}
+                    onClick={handleOpen}
                 />
                 <section className="MorePetInfo">
                     <OneColumn
@@ -155,7 +170,7 @@ export default function PetProfile() {
                         </section>
                     }
                 </section>
-
+                <AuthDialog dialogState={openOverlay} onClose={handleClose} />
             </article>
             <Footer />
         </main>

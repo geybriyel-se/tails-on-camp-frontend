@@ -1500,7 +1500,11 @@ export const PET_TYPE_OTHERS = [{
     }
 ]
 
-// JSON RESPONSES
+/*
+ * JSON RESPONSES
+ */
+
+// for Pet controller
 export const RES_PET_TYPE_DOG = {
     "timestamp": "2025-09-08T06:44:02.414385Z",
     "status": 200,
@@ -2227,5 +2231,709 @@ export const RES_PET_TYPE_OTHERS = {
         }
     ]
 }
+
+
+// for Adoption Request controller
+export const RES_ADREQ_BY_USER = {
+    "timestamp": "2025-09-16T05:34:44.110450Z",
+    "status": 200,
+    "message": "Success",
+    "body": [
+        {
+            "pet": {
+                "id": 62,
+                "name": "Charlie",
+                "type": "Dog",
+                "breed": "Cocker Spaniel",
+                "age": 5,
+                "gender": "Male",
+                "size": "Medium",
+                "description": "A cheerful and affectionate Cocker Spaniel with floppy ears.",
+                "imageUrl": "https://images.unsplash.com/photo-1602886525304-4e9044f09157?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "availability": 1,
+                "shelter": {
+                    "shelterId": 2,
+                    "shelterName": "Paw Haven Animal Shelter",
+                    "lotBlockHouseBldgNo": "Lot 12 Block 5",
+                    "street": "Mabini Street",
+                    "subdivisionVillage": "Greenfields Subdivision",
+                    "barangay": "Barangay San Roque",
+                    "city": "Quezon City",
+                    "province": "Metro Manila",
+                    "country": "Philippines",
+                    "zipcode": "1105",
+                    "contactNumber": "+63 917 123 4567",
+                    "email": "info@pawhavenph.org",
+                    "website": "https://www.pawhavenph.org",
+                    "createdAt": 1738977529.534852000,
+                    "updatedAt": null
+                },
+                "adopter": null,
+                "createdAt": 1738979773.134695000
+            },
+            "adopter": {
+                "userId": 8,
+                "username": "dummy",
+                "email": "dummy@gmail.com",
+                "firstName": null,
+                "lastName": null,
+                "address": null,
+                "phoneNumber": null
+            },
+            "status": "PENDING",
+            "createdAt": 1757997015.898471000,
+            "updatedAt": null
+        },
+        {
+            "pet": {
+                "id": 55,
+                "name": "Whiskers",
+                "type": "Cat",
+                "breed": "Maine Coon",
+                "age": 5,
+                "gender": "Male",
+                "size": "Large",
+                "description": "A fluffy and friendly Maine Coon who loves to be around people.",
+                "imageUrl": "https://images.unsplash.com/photo-1573865526739-10659fec78a5?q=80&w=2630&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "availability": 1,
+                "shelter": {
+                    "shelterId": 3,
+                    "shelterName": "Hope for Strays",
+                    "lotBlockHouseBldgNo": "House 18",
+                    "street": "Rizal Avenue",
+                    "subdivisionVillage": "Sunshine Village",
+                    "barangay": "Barangay Kalayaan",
+                    "city": "Cebu City",
+                    "province": "Cebu",
+                    "country": "Philippines",
+                    "zipcode": "6000",
+                    "contactNumber": "+63 922 345 6789",
+                    "email": "contact@hopeforstrays.com",
+                    "website": "https://www.hopeforstrays.com",
+                    "createdAt": 1738977548.814753000,
+                    "updatedAt": null
+                },
+                "adopter": {
+                    "userId": 1,
+                    "email": "geybriyelsualibio@gmail.com",
+                    "username": "geybriyel",
+                    "password": "$2a$10$54s1smtUcza.uOJnw/XcOuDJmB4OK/iOatBf3DbmpVG2BscHb/sJ2",
+                    "firstName": null,
+                    "lastName": null,
+                    "address": null,
+                    "phoneNumber": null,
+                    "createdAt": null,
+                    "updatedAt": null,
+                    "role": "USER",
+                    "accountNonExpired": true,
+                    "accountNonLocked": true,
+                    "credentialsNonExpired": true,
+                    "authorities": [
+                        {
+                            "authority": "USER"
+                        }
+                    ],
+                    "enabled": true
+                },
+                "createdAt": 1738978746.381983000
+            },
+            "adopter": {
+                "userId": 8,
+                "username": "dummy",
+                "email": "dummy@gmail.com",
+                "firstName": null,
+                "lastName": null,
+                "address": null,
+                "phoneNumber": null
+            },
+            "status": "PENDING",
+            "createdAt": 1757997069.132832000,
+            "updatedAt": null
+        },
+        {
+            "pet": {
+                "id": 61,
+                "name": "Oliver",
+                "type": "Cat",
+                "breed": "British Shorthair",
+                "age": 4,
+                "gender": "Male",
+                "size": "Medium",
+                "description": "A chubby and cuddly British Shorthair with a calm personality.",
+                "imageUrl": "https://images.unsplash.com/photo-1629624466945-3999c586a130?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "availability": 2,
+                "shelter": {
+                    "shelterId": 1,
+                    "shelterName": "Luna's Haven",
+                    "lotBlockHouseBldgNo": "Block 19, Lot 7",
+                    "street": "Shaw Boulevard",
+                    "subdivisionVillage": "Hillside Residences",
+                    "barangay": "Barangay Wack-Wack",
+                    "city": "Mandaluyong City",
+                    "province": "Metro Manila",
+                    "country": "Philippines",
+                    "zipcode": "1555",
+                    "contactNumber": "+63 920 112 3344",
+                    "email": "info@lunashaven.ph",
+                    "website": "https://www.lunashaven.org",
+                    "createdAt": 1714434699.510878000,
+                    "updatedAt": null
+                },
+                "adopter": null,
+                "createdAt": 1738979624.247452000
+            },
+            "adopter": {
+                "userId": 8,
+                "username": "dummy",
+                "email": "dummy@gmail.com",
+                "firstName": null,
+                "lastName": null,
+                "address": null,
+                "phoneNumber": null
+            },
+            "status": "COMPLETED",
+            "createdAt": 1757997071.498058000,
+            "updatedAt": 1757999975.509471000
+        },
+        {
+            "pet": {
+                "id": 53,
+                "name": "Luna",
+                "type": "Cat",
+                "breed": "Siamese",
+                "age": 2,
+                "gender": "Female",
+                "size": "Medium",
+                "description": "A graceful and affectionate Siamese cat with striking blue eyes.",
+                "imageUrl": "https://images.unsplash.com/photo-1562256500-5d49a9903824?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "availability": 1,
+                "shelter": {
+                    "shelterId": 1,
+                    "shelterName": "Luna's Haven",
+                    "lotBlockHouseBldgNo": "Block 19, Lot 7",
+                    "street": "Shaw Boulevard",
+                    "subdivisionVillage": "Hillside Residences",
+                    "barangay": "Barangay Wack-Wack",
+                    "city": "Mandaluyong City",
+                    "province": "Metro Manila",
+                    "country": "Philippines",
+                    "zipcode": "1555",
+                    "contactNumber": "+63 920 112 3344",
+                    "email": "info@lunashaven.ph",
+                    "website": "https://www.lunashaven.org",
+                    "createdAt": 1714434699.510878000,
+                    "updatedAt": null
+                },
+                "adopter": null,
+                "createdAt": 1738978430.588513000
+            },
+            "adopter": {
+                "userId": 16,
+                "username": "testuser",
+                "email": "test@gmail.com",
+                "firstName": null,
+                "lastName": null,
+                "address": null,
+                "phoneNumber": null
+            },
+            "status": "PENDING",
+            "createdAt": 1757997100.136298000,
+            "updatedAt": null
+        },
+        {
+            "pet": {
+                "id": 61,
+                "name": "Oliver",
+                "type": "Cat",
+                "breed": "British Shorthair",
+                "age": 4,
+                "gender": "Male",
+                "size": "Medium",
+                "description": "A chubby and cuddly British Shorthair with a calm personality.",
+                "imageUrl": "https://images.unsplash.com/photo-1629624466945-3999c586a130?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "availability": 2,
+                "shelter": {
+                    "shelterId": 1,
+                    "shelterName": "Luna's Haven",
+                    "lotBlockHouseBldgNo": "Block 19, Lot 7",
+                    "street": "Shaw Boulevard",
+                    "subdivisionVillage": "Hillside Residences",
+                    "barangay": "Barangay Wack-Wack",
+                    "city": "Mandaluyong City",
+                    "province": "Metro Manila",
+                    "country": "Philippines",
+                    "zipcode": "1555",
+                    "contactNumber": "+63 920 112 3344",
+                    "email": "info@lunashaven.ph",
+                    "website": "https://www.lunashaven.org",
+                    "createdAt": 1714434699.510878000,
+                    "updatedAt": null
+                },
+                "adopter": null,
+                "createdAt": 1738979624.247452000
+            },
+            "adopter": {
+                "userId": 1,
+                "username": "geybriyel",
+                "email": "geybriyelsualibio@gmail.com",
+                "firstName": null,
+                "lastName": null,
+                "address": null,
+                "phoneNumber": null
+            },
+            "status": "CLOSED",
+            "createdAt": 1757998349.691210000,
+            "updatedAt": 1757999975.509556000
+        },
+        {
+            "pet": {
+                "id": 69,
+                "name": "Shelly",
+                "type": "Turtle",
+                "breed": "Unknown",
+                "age": 5,
+                "gender": "Female",
+                "size": "Medium",
+                "description": "A calm and easygoing turtle that enjoys basking under the light and swimming in its tank.",
+                "imageUrl": "https://images.unsplash.com/photo-1604984938695-709c41f45cf1?q=80&w=2609&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "availability": 1,
+                "shelter": {
+                    "shelterId": 2,
+                    "shelterName": "Paw Haven Animal Shelter",
+                    "lotBlockHouseBldgNo": "Lot 12 Block 5",
+                    "street": "Mabini Street",
+                    "subdivisionVillage": "Greenfields Subdivision",
+                    "barangay": "Barangay San Roque",
+                    "city": "Quezon City",
+                    "province": "Metro Manila",
+                    "country": "Philippines",
+                    "zipcode": "1105",
+                    "contactNumber": "+63 917 123 4567",
+                    "email": "info@pawhavenph.org",
+                    "website": "https://www.pawhavenph.org",
+                    "createdAt": 1738977529.534852000,
+                    "updatedAt": null
+                },
+                "adopter": null,
+                "createdAt": 1738980969.228065000
+            },
+            "adopter": {
+                "userId": 7,
+                "username": "newuser",
+                "email": "newuser@gmail.com",
+                "firstName": null,
+                "lastName": null,
+                "address": null,
+                "phoneNumber": null
+            },
+            "status": "PENDING",
+            "createdAt": 1757998352.630807000,
+            "updatedAt": null
+        },
+        {
+            "pet": {
+                "id": 65,
+                "name": "Tiger",
+                "type": "Cat",
+                "breed": "Orange Tabby",
+                "age": 4,
+                "gender": "Male",
+                "size": "Medium",
+                "description": "A confident and independent tabby cat with a love for sunbathing.",
+                "imageUrl": "https://images.unsplash.com/photo-1625192494307-71c4c508f2c5?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "availability": 1,
+                "shelter": {
+                    "shelterId": 5,
+                    "shelterName": "Paws & Claws Rescue Center",
+                    "lotBlockHouseBldgNo": "Building 3, Unit 10",
+                    "street": "Katipunan Avenue",
+                    "subdivisionVillage": "Blue Ridge Village",
+                    "barangay": "Barangay Loyola Heights",
+                    "city": "Quezon City",
+                    "province": "Metro Manila",
+                    "country": "Philippines",
+                    "zipcode": "1108",
+                    "contactNumber": "+63 918 234 5678",
+                    "email": "hello@pawsandclawsph.org",
+                    "website": "https://www.pawsandclawsph.org",
+                    "createdAt": 1738977576.903007000,
+                    "updatedAt": null
+                },
+                "adopter": {
+                    "userId": 4,
+                    "email": "migomogu@gmail.com",
+                    "username": "migomogu",
+                    "password": "$2a$10$uJ7q0kt4SyXAgeaIrCR40eJAI3NY9fZNRxEPpeOzdsLQ3YD0IR1Mm",
+                    "firstName": "Migo",
+                    "lastName": "Mogu",
+                    "address": "",
+                    "phoneNumber": "",
+                    "createdAt": null,
+                    "updatedAt": 1713325018.156364000,
+                    "role": "USER",
+                    "accountNonExpired": true,
+                    "accountNonLocked": true,
+                    "credentialsNonExpired": true,
+                    "authorities": [
+                        {
+                            "authority": "USER"
+                        }
+                    ],
+                    "enabled": true
+                },
+                "createdAt": 1738980236.588622000
+            },
+            "adopter": {
+                "userId": 1,
+                "username": "geybriyel",
+                "email": "geybriyelsualibio@gmail.com",
+                "firstName": null,
+                "lastName": null,
+                "address": null,
+                "phoneNumber": null
+            },
+            "status": "REJECTED",
+            "createdAt": 1757998400.248244000,
+            "updatedAt": 1757999670.108069000
+        },
+        {
+            "pet": {
+                "id": 58,
+                "name": "Rocky",
+                "type": "Dog",
+                "breed": "German Shepherd",
+                "age": 6,
+                "gender": "Male",
+                "size": "Large",
+                "description": "A smart and protective German Shepherd who is great with families.",
+                "imageUrl": "https://images.unsplash.com/photo-1589070621558-a4e98580c9ca?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "availability": 2,
+                "shelter": {
+                    "shelterId": 6,
+                    "shelterName": "Safe Haven Animal Rescue",
+                    "lotBlockHouseBldgNo": "Unit 5, Block 15",
+                    "street": "Osmeña Highway",
+                    "subdivisionVillage": "Horizon Estates",
+                    "barangay": "Barangay Poblacion",
+                    "city": "Makati City",
+                    "province": "Metro Manila",
+                    "country": "Philippines",
+                    "zipcode": "1200",
+                    "contactNumber": "+63 927 567 8901",
+                    "email": "info@safehavenrescue.ph",
+                    "website": "https://www.safehavenrescue.ph",
+                    "createdAt": 1738977594.530190000,
+                    "updatedAt": null
+                },
+                "adopter": null,
+                "createdAt": 1738979298.924553000
+            },
+            "adopter": {
+                "userId": 1,
+                "username": "geybriyel",
+                "email": "geybriyelsualibio@gmail.com",
+                "firstName": null,
+                "lastName": null,
+                "address": null,
+                "phoneNumber": null
+            },
+            "status": "ON_HOLD",
+            "createdAt": 1757998415.048341000,
+            "updatedAt": 1757999872.644289000
+        },
+        {
+            "pet": {
+                "id": 54,
+                "name": "Max",
+                "type": "Dog",
+                "breed": "Labrador Retriever",
+                "age": 4,
+                "gender": "Male",
+                "size": "Large",
+                "description": "A loyal and energetic Lab who enjoys fetch and long walks.",
+                "imageUrl": "https://images.unsplash.com/photo-1506242395783-cec2bda110e7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "availability": 2,
+                "shelter": {
+                    "shelterId": 2,
+                    "shelterName": "Paw Haven Animal Shelter",
+                    "lotBlockHouseBldgNo": "Lot 12 Block 5",
+                    "street": "Mabini Street",
+                    "subdivisionVillage": "Greenfields Subdivision",
+                    "barangay": "Barangay San Roque",
+                    "city": "Quezon City",
+                    "province": "Metro Manila",
+                    "country": "Philippines",
+                    "zipcode": "1105",
+                    "contactNumber": "+63 917 123 4567",
+                    "email": "info@pawhavenph.org",
+                    "website": "https://www.pawhavenph.org",
+                    "createdAt": 1738977529.534852000,
+                    "updatedAt": null
+                },
+                "adopter": null,
+                "createdAt": 1738978597.487828000
+            },
+            "adopter": {
+                "userId": 1,
+                "username": "geybriyel",
+                "email": "geybriyelsualibio@gmail.com",
+                "firstName": null,
+                "lastName": null,
+                "address": null,
+                "phoneNumber": null
+            },
+            "status": "CANCELLED",
+            "createdAt": 1757998416.957458000,
+            "updatedAt": 1758000039.465585000
+        },
+        {
+            "pet": {
+                "id": 56,
+                "name": "Bella",
+                "type": "Dog",
+                "breed": "Beagle",
+                "age": 3,
+                "gender": "Female",
+                "size": "Medium",
+                "description": "A curious and playful Beagle who loves sniffing around and exploring.",
+                "imageUrl": "https://images.unsplash.com/photo-1608113239923-a0bf3a1e873f?q=80&w=2489&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "availability": 2,
+                "shelter": {
+                    "shelterId": 4,
+                    "shelterName": "Furry Friends Haven",
+                    "lotBlockHouseBldgNo": "Lot 20",
+                    "street": "Bonifacio Drive",
+                    "subdivisionVillage": "Rosewood Heights",
+                    "barangay": "Barangay Talon",
+                    "city": "Davao City",
+                    "province": "Davao del Sur",
+                    "country": "Philippines",
+                    "zipcode": "8000",
+                    "contactNumber": "+63 935 678 9012",
+                    "email": "support@furryfriendshaven.ph",
+                    "website": "https://www.furryfriendshaven.ph",
+                    "createdAt": 1738977559.210962000,
+                    "updatedAt": null
+                },
+                "adopter": null,
+                "createdAt": 1738978891.053326000
+            },
+            "adopter": {
+                "userId": 1,
+                "username": "geybriyel",
+                "email": "geybriyelsualibio@gmail.com",
+                "firstName": null,
+                "lastName": null,
+                "address": null,
+                "phoneNumber": null
+            },
+            "status": "APPROVED",
+            "createdAt": 1757998426.416336000,
+            "updatedAt": 1757999615.751117000
+        },
+        {
+            "pet": {
+                "id": 52,
+                "name": "Buddy",
+                "type": "Dog",
+                "breed": "Golden Retriever",
+                "age": 3,
+                "gender": "Male",
+                "size": "Large",
+                "description": "A friendly and playful Golden Retriever who loves outdoor activities and cuddles.",
+                "imageUrl": "https://images.unsplash.com/photo-1588022274642-f238f77ec193?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "availability": 0,
+                "shelter": {
+                    "shelterId": 1,
+                    "shelterName": "Luna's Haven",
+                    "lotBlockHouseBldgNo": "Block 19, Lot 7",
+                    "street": "Shaw Boulevard",
+                    "subdivisionVillage": "Hillside Residences",
+                    "barangay": "Barangay Wack-Wack",
+                    "city": "Mandaluyong City",
+                    "province": "Metro Manila",
+                    "country": "Philippines",
+                    "zipcode": "1555",
+                    "contactNumber": "+63 920 112 3344",
+                    "email": "info@lunashaven.ph",
+                    "website": "https://www.lunashaven.org",
+                    "createdAt": 1714434699.510878000,
+                    "updatedAt": null
+                },
+                "adopter": {
+                    "userId": 1,
+                    "email": "geybriyelsualibio@gmail.com",
+                    "username": "geybriyel",
+                    "password": "$2a$10$54s1smtUcza.uOJnw/XcOuDJmB4OK/iOatBf3DbmpVG2BscHb/sJ2",
+                    "firstName": null,
+                    "lastName": null,
+                    "address": null,
+                    "phoneNumber": null,
+                    "createdAt": null,
+                    "updatedAt": null,
+                    "role": "USER",
+                    "accountNonExpired": true,
+                    "accountNonLocked": true,
+                    "credentialsNonExpired": true,
+                    "authorities": [
+                        {
+                            "authority": "USER"
+                        }
+                    ],
+                    "enabled": true
+                },
+                "createdAt": 1738977249.154602000
+            },
+            "adopter": {
+                "userId": 1,
+                "username": "geybriyel",
+                "email": "geybriyelsualibio@gmail.com",
+                "firstName": null,
+                "lastName": null,
+                "address": null,
+                "phoneNumber": null
+            },
+            "status": "COMPLETED",
+            "createdAt": 1757998492.373840000,
+            "updatedAt": 1757999975.509471000
+        },
+        {
+            "pet": {
+                "id": 58,
+                "name": "Rocky",
+                "type": "Dog",
+                "breed": "German Shepherd",
+                "age": 6,
+                "gender": "Male",
+                "size": "Large",
+                "description": "A smart and protective German Shepherd who is great with families.",
+                "imageUrl": "https://images.unsplash.com/photo-1589070621558-a4e98580c9ca?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "availability": 2,
+                "shelter": {
+                    "shelterId": 6,
+                    "shelterName": "Safe Haven Animal Rescue",
+                    "lotBlockHouseBldgNo": "Unit 5, Block 15",
+                    "street": "Osmeña Highway",
+                    "subdivisionVillage": "Horizon Estates",
+                    "barangay": "Barangay Poblacion",
+                    "city": "Makati City",
+                    "province": "Metro Manila",
+                    "country": "Philippines",
+                    "zipcode": "1200",
+                    "contactNumber": "+63 927 567 8901",
+                    "email": "info@safehavenrescue.ph",
+                    "website": "https://www.safehavenrescue.ph",
+                    "createdAt": 1738977594.530190000,
+                    "updatedAt": null
+                },
+                "adopter": null,
+                "createdAt": 1738979298.924553000
+            },
+            "adopter": {
+                "userId": 4,
+                "username": "migomogu",
+                "email": "migomogu@gmail.com",
+                "firstName": "Migo",
+                "lastName": "Mogu",
+                "address": "",
+                "phoneNumber": ""
+            },
+            "status": "REJECTED",
+            "createdAt": 1757999728.365255000,
+            "updatedAt": 1757999756.105273000
+        },
+        {
+            "pet": {
+                "id": 58,
+                "name": "Rocky",
+                "type": "Dog",
+                "breed": "German Shepherd",
+                "age": 6,
+                "gender": "Male",
+                "size": "Large",
+                "description": "A smart and protective German Shepherd who is great with families.",
+                "imageUrl": "https://images.unsplash.com/photo-1589070621558-a4e98580c9ca?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "availability": 2,
+                "shelter": {
+                    "shelterId": 6,
+                    "shelterName": "Safe Haven Animal Rescue",
+                    "lotBlockHouseBldgNo": "Unit 5, Block 15",
+                    "street": "Osmeña Highway",
+                    "subdivisionVillage": "Horizon Estates",
+                    "barangay": "Barangay Poblacion",
+                    "city": "Makati City",
+                    "province": "Metro Manila",
+                    "country": "Philippines",
+                    "zipcode": "1200",
+                    "contactNumber": "+63 927 567 8901",
+                    "email": "info@safehavenrescue.ph",
+                    "website": "https://www.safehavenrescue.ph",
+                    "createdAt": 1738977594.530190000,
+                    "updatedAt": null
+                },
+                "adopter": null,
+                "createdAt": 1738979298.924553000
+            },
+            "adopter": {
+                "userId": 16,
+                "username": "testuser",
+                "email": "test@gmail.com",
+                "firstName": null,
+                "lastName": null,
+                "address": null,
+                "phoneNumber": null
+            },
+            "status": "APPROVED",
+            "createdAt": 1757999856.006153000,
+            "updatedAt": 1757999872.656414000
+        },
+        {
+            "pet": {
+                "id": 71,
+                "name": "Sunny",
+                "type": "Bird",
+                "breed": "Lovebird",
+                "age": 3,
+                "gender": "Male",
+                "size": "Small",
+                "description": "A colorful Lovebird that enjoys chirping and socializing. Energetic and affectionate.",
+                "imageUrl": "https://images.unsplash.com/photo-1617374595976-072d1530e429?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "availability": 1,
+                "shelter": {
+                    "shelterId": 4,
+                    "shelterName": "Furry Friends Haven",
+                    "lotBlockHouseBldgNo": "Lot 20",
+                    "street": "Bonifacio Drive",
+                    "subdivisionVillage": "Rosewood Heights",
+                    "barangay": "Barangay Talon",
+                    "city": "Davao City",
+                    "province": "Davao del Sur",
+                    "country": "Philippines",
+                    "zipcode": "8000",
+                    "contactNumber": "+63 935 678 9012",
+                    "email": "support@furryfriendshaven.ph",
+                    "website": "https://www.furryfriendshaven.ph",
+                    "createdAt": 1738977559.210962000,
+                    "updatedAt": null
+                },
+                "adopter": null,
+                "createdAt": 1738981292.949541000
+            },
+            "adopter": {
+                "userId": 1,
+                "username": "geybriyel",
+                "email": "geybriyelsualibio@gmail.com",
+                "firstName": null,
+                "lastName": null,
+                "address": null,
+                "phoneNumber": null
+            },
+            "status": "PENDING",
+            "createdAt": 1758000127.388602000,
+            "updatedAt": null
+        }
+    ]
+}
+
 
 export default ALL_PETS;
