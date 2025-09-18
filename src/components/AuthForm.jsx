@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { DialogContent, TextField, Button, Typography, Box } from "@mui/material";
 
-export default function AuthForm({ mode: initialMode = "register", onToggle, onSubmit }) {
+export default function AuthForm({ mode: initialMode = "login", onToggle, onSubmit }) {
     const [mode, setMode] = useState(initialMode);
 
     const toggleMode = () => {

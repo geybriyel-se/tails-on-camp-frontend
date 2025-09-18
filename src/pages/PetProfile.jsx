@@ -41,7 +41,7 @@ export default function PetProfile() {
 
     return (
         <main className="PetProfile">
-            <Navbar />
+            <Navbar activeTab={"ADOPT"} />
             <article className="Content">
                 <ProfileSidebar
                     imgSrc={petObj.imageUrl}

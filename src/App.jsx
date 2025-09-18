@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import './App.css'
 import { CssBaseline } from '@mui/material'
 import Login from './pages/Login'
@@ -39,9 +39,10 @@ function App() {
       <CssBaseline />
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />} />
-          <Route path='/register' element={<Register theme={toggleTheme} toggleThemeFunc={changeTheme} snackbar={openSnackbar} closeFunc={handleClose} />} />
-          <Route path='/login' element={<Login theme={toggleTheme} toggleThemeFunc={changeTheme} snackbar={openSnackbar} closeFunc={handleClose} />} />
+          {/* <Route index element={<Home />} /> */}
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          {/* <Route path='/register' element={<Register theme={toggleTheme} toggleThemeFunc={changeTheme} snackbar={openSnackbar} closeFunc={handleClose} />} /> */}
+          {/* <Route path='/login' element={<Login theme={toggleTheme} toggleThemeFunc={changeTheme} snackbar={openSnackbar} closeFunc={handleClose} />} /> */}
           <Route path='/home' element={<Home />} />
           <Route path='/adopt' element={<Adopt />} />
           <Route path='/donate' element={<Donate />} />

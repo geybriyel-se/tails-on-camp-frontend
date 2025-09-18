@@ -7,6 +7,7 @@ import { Drawer } from '@mui/material';
 import NavLinkContainer from './NavLinksContainer';
 import { v4 as uuid } from 'uuid'
 import { Diversity3, Home, Pets, Info, VolunteerActivism, Newspaper, ContactPage } from '@mui/icons-material'
+import AuthDialog from './AuthDialog'
 
 const links = [
     { key: uuid(), url: "/home", displayName: "HOME", icon: <Home />},
@@ -18,13 +19,23 @@ const links = [
     { key: uuid(), url: "/contact", displayName: "CONTACT", icon: <ContactPage />},
 ]
 
-export default function Navbar() {
+export default function Navbar({activeTab = ""}) {
 
     const [showDrawer, setShowDrawer] = useState(false);
 
     const toggleDrawer = (newOpen) => () => {
         setShowDrawer(newOpen);
     };
+
+    const [openDialog, setOpenDialog] = useState(false);
+
+    function handleOpen() {
+        setOpenDialog(true);
+    }
+
+    function handleClose() {
+        setOpenDialog(false);
+    }
 
     return (
         <nav className="Navbar">
@@ -36,7 +47,7 @@ export default function Navbar() {
                         <NavLink
                             key={v.key}
                             to={v.url}
-                            className={({ isActive }) => `NavLink NavLink${v.displayName} ${isActive ? "active" : ""}`}
+                            className={({ isActive }) => `NavLink NavLink${v.displayName} ${isActive || activeTab === v.displayName ? "active" : ""}`}
                         >
                             {v.displayName}
                         </NavLink>
@@ -75,7 +86,9 @@ export default function Navbar() {
 
                 <div className="NavAccount">
                     {/* <Link to="/register"><button className='NavAccountBtn NavAccountBtnRegister'>REGISTER</button></Link> */}
-                    <Link to="/"><button className='NavAccountBtn'>LOGIN</button></Link>
+                    {/* <Link to="/"><button className='NavAccountBtn'>LOGIN</button></Link> */}
+                    <button className='NavAccountBtn' onClick={handleOpen}>LOGIN</button>
+                    <AuthDialog dialogState={openDialog} onClose={handleClose} />
                 </div>
 
             </div>
