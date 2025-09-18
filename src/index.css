@@ -21,8 +21,18 @@ html {
 
 html body {
     background-color: #F8F8F8;
+    /* transform: scale(0.8); */
+    /* transform-origin: top center; */
+    /* width: 125%; */
+    /* height: 125vh */
 }
 
 button:hover {
     cursor: pointer;
+}
+
+#root {
+    /* font-size: 80%;  */
+      zoom: 0.8;
+
 }
