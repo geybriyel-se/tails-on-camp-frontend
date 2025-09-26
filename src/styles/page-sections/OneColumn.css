@@ -18,8 +18,9 @@
 
 .OneColumn .SectionTitle {
     font-family: 'Boogaloo', 'Trebuchet MS', sans-serif;
-    font-size: clamp(12px, 6vw, 42px);
+    font-size: clamp(30px, 4vw, 50px);
     margin-bottom: 0;
+    text-align: center;
 }
 
 .OneColumn .SectionSubtitle {

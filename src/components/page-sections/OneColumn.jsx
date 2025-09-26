@@ -1,6 +1,6 @@
 import '../../styles/page-sections/OneColumn.css'
 
-export default function OneColumn({ id = "", className = "", title, subtitle = "", paragraph = "", imgSrc = "", imgAlt = "" }) {
+export default function OneColumn({ id = "", className = "", title, subtitle = "", paragraph = "", imgSrc = "", imgAlt = "", children = "" }) {
     return (
         <section className={`OneColumn ${className}`} id={id && id}>
             <main className="ContentContainer">
@@ -11,6 +11,11 @@ export default function OneColumn({ id = "", className = "", title, subtitle = "
                     <figure className="ImageContainer">
                         <img src={imgSrc} alt={imgAlt} className="Image" />
                     </figure>
+                }
+                {children !== "" &&
+                    <div className="Children">
+                        {children}
+                    </div>
                 }
             </main>
         </section>

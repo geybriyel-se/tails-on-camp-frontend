@@ -1,0 +1,125 @@
+.Contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Contact .FormSection .ContainerL .SectionSubtitle,
+.Contact .DetailsSection .ContainerR .SectionSubtitle {
+    order: 1;
+    margin: 0;
+    align-self: flex-start;
+    color: #3BA8D1;
+    font-weight: 700;
+}
+
+.Contact .FormSection .ContainerL {
+    padding-left: 0;
+}
+
+.Contact .FormSection .ContainerL .SectionTitle {
+    order: 2;
+    margin-left: 0;
+}
+
+.Contact .FormSection .ContainerL .ChildrenL {
+    order: 3;
+}
+
+.Contact .FormSection .ContainerR {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 2rem;
+    padding: clamp(20px, 4vw, 48px);
+}
+
+.Contact .FormSection .ChildrenR {
+    width: 100%;
+}
+
+.Contact .FormSection .ChildrenR .MuiFilledInput-root {
+  background-color: #EAF7FC;
+  border-radius: 0 !important;
+}
+
+.Contact .FormSection .TextField-ContactUs-Box {
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(8px, 1.5vw, 16px);
+}
+
+.Contact .FormSection .TextField-ContactUs-Submit {
+    background-color: #5BC0EB;
+}
+
+.Contact .FormSection .TextField-ContactUs-Submit:hover {
+    background-color: #3BA8D1;
+}
+
+.Contact .DetailsSection .ContainerL {
+    padding: 0;
+}
+
+.Contact .DetailsSection .Children {
+    width: 100%;
+}
+
+.Contact .DetailsSection .ChildrenL {
+    height: 100%;
+}
+
+.Contact .DetailsSection .ContainerR {
+    background-color: #EAF7FC;
+    align-items: flex-start;
+    padding: clamp(48px, 8vw, 128px);
+}
+
+
+.Contact .DetailsSection .ContainerR .SectionTitle {
+    order: 2;
+    margin-left: 0;
+}
+
+.Contact .DetailsSection .ContainerR .ChildrenR {
+    order: 3;
+}
+
+.Contact .DetailsSection .ContactDetails {
+    display: flex;
+    gap: clamp(8px, 1.5vw, 16px);
+    line-height: 2;
+    align-items: center;
+}
+
+
+.Contact .SocialNetworkSection .LogoArrayContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.Contact .SocialNetworkSection .LogoArrayContainer .LogoContainer {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 7px;
+    margin: 0;
+}
+
+.Contact .SocialNetworkSection .LogoIcon {
+    color: #F8F8F8;
+    font-size: clamp(1rem, 3vw, 1.8rem);
+}
+
+
+@media screen and (max-width: 750px) {
+    .Contact .FormSection .Container,
+    .Contact .DetailsSection .Container {
+        width: 100%;
+    }
+}
