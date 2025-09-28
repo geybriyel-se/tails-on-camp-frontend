@@ -129,7 +129,7 @@
         display: none;
     }
 
-    .NavAccountBtn {
+    .NavAccountBtn, .ProfileBtn {
         display: none;
         visibility: hidden;
     }
