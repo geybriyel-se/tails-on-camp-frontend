@@ -1,6 +1,5 @@
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import logo from '../assets/brand.svg'
-import logo1 from '../assets/logo-1.svg'
 import '../styles/Navbar.css'
 import { useState } from 'react'
 import { Drawer, Menu, MenuItem, Avatar, Divider, ListItemIcon, Tooltip, IconButton } from '@mui/material';
@@ -8,9 +7,7 @@ import NavLinkContainer from './NavLinksContainer';
 import { v4 as uuid } from 'uuid'
 import { Diversity3, Home, Pets, Info, VolunteerActivism, Newspaper, ContactPage } from '@mui/icons-material'
 import AuthDialog from './AuthDialog'
-import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
-import FolderIcon from '@mui/icons-material/Folder';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -29,14 +26,16 @@ const links = [
 ]
 
 export default function Navbar({ activeTab = "" }) {
-
     const [showDrawer, setShowDrawer] = useState(false);
+    const [openDialog, setOpenDialog] = useState(false);
+    const [anchorEl, setAnchorEl] = useState(null);
 
-    const toggleDrawer = (newOpen) => () => {
+    const navigate = useNavigate();
+    const open = Boolean(anchorEl);
+
+    function toggleDrawer(newOpen) {
         setShowDrawer(newOpen);
     };
-
-    const [openDialog, setOpenDialog] = useState(false);
 
     function handleOpen() {
         setOpenDialog(true);
@@ -46,21 +45,23 @@ export default function Navbar({ activeTab = "" }) {
         setOpenDialog(false);
     }
 
-    const [anchorEl, setAnchorEl] = useState(null);
-    const open = Boolean(anchorEl);
-
-    const handleClick = (event) => {
+    function handleClick(event) {
         setAnchorEl(event.currentTarget);
-    };
+    }
 
-    const handleCloseAccMenu = () => {
+    function handleCloseAccMenu() {
         setAnchorEl(null);
-    };
+    }
+
+    function handleGoToMenu(endpoint) {
+        handleCloseAccMenu()
+        navigate(`/me${endpoint}`)
+    }
 
 
     return (
         <nav className="Navbar">
-            <button className='DrawerButton' onClick={toggleDrawer(true)}>☰</button>
+            <button className='DrawerButton' onClick={() => toggleDrawer(true)}>☰</button>
             <div className="NavContent">
                 <Link to="/home" className='LogoLinkContainer'><img src={logo} alt="Tails on Camp logo and brand name" className='NavLogo' /></Link>
                 <NavLinkContainer menuLink={
@@ -77,8 +78,7 @@ export default function Navbar({ activeTab = "" }) {
 
 
                 <Drawer open={showDrawer}
-                    onClose={toggleDrawer(false)}
-                    // anchor='right'
+                    onClose={() => toggleDrawer(false)}
                     className='NavDrawer'
                     PaperProps={{
                         sx: {
@@ -160,45 +160,51 @@ export default function Navbar({ activeTab = "" }) {
                         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                     >
-                        <MenuItem onClick={handleCloseAccMenu}>
+                        {/* <MenuItem onClick={() => handleGoToMenu("/dashboard")}> */}
+                        <MenuItem>
                             <Avatar >
                                 <DashboardIcon />
                             </Avatar>
                             Dashboard
                         </MenuItem>
-                        <MenuItem onClick={handleCloseAccMenu}>
+                        <MenuItem onClick={() => handleGoToMenu("/applications")}>
                             <Avatar>
                                 <InsertDriveFileIcon />
                             </Avatar>
                             My Applications
                         </MenuItem>
-                        <MenuItem onClick={handleCloseAccMenu}>
+                        {/* <MenuItem onClick={() => handleGoToMenu("/saved")}> */}
+                        <MenuItem>
                             <Avatar>
                                 <FavoriteIcon />
                             </Avatar>
                             Saved Items
                         </MenuItem>
                         <Divider />
-                        <MenuItem onClick={handleCloseAccMenu}>
+                        {/* <MenuItem onClick={() => handleGoToMenu("/profile")}> */}
+                        <MenuItem>
                             <Avatar>
                                 <PersonIcon />
                             </Avatar>
                             Profile
                         </MenuItem>
-                        <MenuItem onClick={handleCloseAccMenu}>
+                        {/* <MenuItem onClick={() => handleGoToMenu("/notifications")}> */}
+                        <MenuItem>
                             <Avatar>
                                 <NotificationsIcon />
                             </Avatar>
                             Notifications
                         </MenuItem>
                         <Divider />
-                        <MenuItem onClick={handleCloseAccMenu}>
+                        {/* <MenuItem onClick={() => handleGoToMenu("/help")}> */}
+                        <MenuItem>
                             <ListItemIcon>
                                 <HelpIcon fontSize="small" />
                             </ListItemIcon>
                             Help & Support
                         </MenuItem>
-                        <MenuItem onClick={handleCloseAccMenu}>
+                        {/* <MenuItem onClick={() => handleGoToMenu("/logout")}> */}
+                        <MenuItem>
                             <ListItemIcon>
                                 <Logout fontSize="small" />
                             </ListItemIcon>

@@ -2235,11 +2235,12 @@ export const RES_PET_TYPE_OTHERS = {
 
 // for Adoption Request controller
 export const RES_ADREQ_BY_USER = {
-    "timestamp": "2025-09-16T05:34:44.110450Z",
+    "timestamp": "2025-09-28T08:47:51.262863Z",
     "status": 200,
     "message": "Success",
     "body": [
         {
+            "adoptionId": 252,
             "pet": {
                 "id": 62,
                 "name": "Charlie",
@@ -2281,10 +2282,11 @@ export const RES_ADREQ_BY_USER = {
                 "phoneNumber": null
             },
             "status": "PENDING",
-            "createdAt": 1757997015.898471000,
+            "createdAt": 1757565015.898471000,
             "updatedAt": null
         },
         {
+            "adoptionId": 253,
             "pet": {
                 "id": 55,
                 "name": "Whiskers",
@@ -2325,14 +2327,14 @@ export const RES_ADREQ_BY_USER = {
                     "createdAt": null,
                     "updatedAt": null,
                     "role": "USER",
-                    "accountNonExpired": true,
-                    "accountNonLocked": true,
-                    "credentialsNonExpired": true,
                     "authorities": [
                         {
                             "authority": "USER"
                         }
                     ],
+                    "accountNonExpired": true,
+                    "accountNonLocked": true,
+                    "credentialsNonExpired": true,
                     "enabled": true
                 },
                 "createdAt": 1738978746.381983000
@@ -2351,6 +2353,7 @@ export const RES_ADREQ_BY_USER = {
             "updatedAt": null
         },
         {
+            "adoptionId": 254,
             "pet": {
                 "id": 61,
                 "name": "Oliver",
@@ -2392,10 +2395,11 @@ export const RES_ADREQ_BY_USER = {
                 "phoneNumber": null
             },
             "status": "COMPLETED",
-            "createdAt": 1757997071.498058000,
+            "createdAt": 1755059471.498058000,
             "updatedAt": 1757999975.509471000
         },
         {
+            "adoptionId": 255,
             "pet": {
                 "id": 53,
                 "name": "Luna",
@@ -2437,10 +2441,11 @@ export const RES_ADREQ_BY_USER = {
                 "phoneNumber": null
             },
             "status": "PENDING",
-            "createdAt": 1757997100.136298000,
+            "createdAt": 1756182700.136298000,
             "updatedAt": null
         },
         {
+            "adoptionId": 256,
             "pet": {
                 "id": 61,
                 "name": "Oliver",
@@ -2482,10 +2487,11 @@ export const RES_ADREQ_BY_USER = {
                 "phoneNumber": null
             },
             "status": "CLOSED",
-            "createdAt": 1757998349.691210000,
+            "createdAt": 1739163149.691210000,
             "updatedAt": 1757999975.509556000
         },
         {
+            "adoptionId": 257,
             "pet": {
                 "id": 69,
                 "name": "Shelly",
@@ -2527,10 +2533,11 @@ export const RES_ADREQ_BY_USER = {
                 "phoneNumber": null
             },
             "status": "PENDING",
-            "createdAt": 1757998352.630807000,
+            "createdAt": 1755924752.630807000,
             "updatedAt": null
         },
         {
+            "adoptionId": 258,
             "pet": {
                 "id": 65,
                 "name": "Tiger",
@@ -2571,14 +2578,14 @@ export const RES_ADREQ_BY_USER = {
                     "createdAt": null,
                     "updatedAt": 1713325018.156364000,
                     "role": "USER",
-                    "accountNonExpired": true,
-                    "accountNonLocked": true,
-                    "credentialsNonExpired": true,
                     "authorities": [
                         {
                             "authority": "USER"
                         }
                     ],
+                    "accountNonExpired": true,
+                    "accountNonLocked": true,
+                    "credentialsNonExpired": true,
                     "enabled": true
                 },
                 "createdAt": 1738980236.588622000
@@ -2593,10 +2600,11 @@ export const RES_ADREQ_BY_USER = {
                 "phoneNumber": null
             },
             "status": "REJECTED",
-            "createdAt": 1757998400.248244000,
+            "createdAt": 1744347200.248244000,
             "updatedAt": 1757999670.108069000
         },
         {
+            "adoptionId": 259,
             "pet": {
                 "id": 58,
                 "name": "Rocky",
@@ -2638,10 +2646,11 @@ export const RES_ADREQ_BY_USER = {
                 "phoneNumber": null
             },
             "status": "ON_HOLD",
-            "createdAt": 1757998415.048341000,
+            "createdAt": 1754110415.048341000,
             "updatedAt": 1757999872.644289000
         },
         {
+            "adoptionId": 260,
             "pet": {
                 "id": 54,
                 "name": "Max",
@@ -2683,10 +2692,11 @@ export const RES_ADREQ_BY_USER = {
                 "phoneNumber": null
             },
             "status": "CANCELLED",
-            "createdAt": 1757998416.957458000,
+            "createdAt": 1737262416.957458000,
             "updatedAt": 1758000039.465585000
         },
         {
+            "adoptionId": 261,
             "pet": {
                 "id": 56,
                 "name": "Bella",
@@ -2728,10 +2738,11 @@ export const RES_ADREQ_BY_USER = {
                 "phoneNumber": null
             },
             "status": "APPROVED",
-            "createdAt": 1757998426.416336000,
+            "createdAt": 1752036826.416336000,
             "updatedAt": 1757999615.751117000
         },
         {
+            "adoptionId": 262,
             "pet": {
                 "id": 52,
                 "name": "Buddy",
@@ -2772,14 +2783,14 @@ export const RES_ADREQ_BY_USER = {
                     "createdAt": null,
                     "updatedAt": null,
                     "role": "USER",
-                    "accountNonExpired": true,
-                    "accountNonLocked": true,
-                    "credentialsNonExpired": true,
                     "authorities": [
                         {
                             "authority": "USER"
                         }
                     ],
+                    "accountNonExpired": true,
+                    "accountNonLocked": true,
+                    "credentialsNonExpired": true,
                     "enabled": true
                 },
                 "createdAt": 1738977249.154602000
@@ -2794,10 +2805,11 @@ export const RES_ADREQ_BY_USER = {
                 "phoneNumber": null
             },
             "status": "COMPLETED",
-            "createdAt": 1757998492.373840000,
+            "createdAt": 1746075292.373840000,
             "updatedAt": 1757999975.509471000
         },
         {
+            "adoptionId": 263,
             "pet": {
                 "id": 58,
                 "name": "Rocky",
@@ -2839,10 +2851,11 @@ export const RES_ADREQ_BY_USER = {
                 "phoneNumber": ""
             },
             "status": "REJECTED",
-            "createdAt": 1757999728.365255000,
+            "createdAt": 1739423728.365255000,
             "updatedAt": 1757999756.105273000
         },
         {
+            "adoptionId": 264,
             "pet": {
                 "id": 58,
                 "name": "Rocky",
@@ -2884,10 +2897,11 @@ export const RES_ADREQ_BY_USER = {
                 "phoneNumber": null
             },
             "status": "APPROVED",
-            "createdAt": 1757999856.006153000,
+            "createdAt": 1755321456.006153000,
             "updatedAt": 1757999872.656414000
         },
         {
+            "adoptionId": 265,
             "pet": {
                 "id": 71,
                 "name": "Sunny",
@@ -2929,7 +2943,7 @@ export const RES_ADREQ_BY_USER = {
                 "phoneNumber": null
             },
             "status": "PENDING",
-            "createdAt": 1758000127.388602000,
+            "createdAt": 1755667327.388602000,
             "updatedAt": null
         }
     ]

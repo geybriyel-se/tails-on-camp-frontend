@@ -2,3 +2,19 @@
     color: #eb865b;
     font-weight: 500;
 }
+
+.ContentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 90%;
+    margin: 55px auto;
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+.UserPageTitle {
+    text-align: left;
+    align-self: flex-start;
+    font-size: clamp(42px, 3.5vw, 70px);
+}
