@@ -160,8 +160,7 @@ export default function Navbar({ activeTab = "" }) {
                         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                     >
-                        {/* <MenuItem onClick={() => handleGoToMenu("/dashboard")}> */}
-                        <MenuItem>
+                        <MenuItem onClick={() => handleGoToMenu("/dashboard")}>
                             <Avatar >
                                 <DashboardIcon />
                             </Avatar>

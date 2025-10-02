@@ -13,6 +13,7 @@ import Bulletin from './pages/Bulletin'
 import Contact from './pages/Contact'
 import PetProfile from './pages/PetProfile'
 import Applications from './pages/Applications'
+import Dashboard from './pages/Dashboard'
 
 
 
@@ -54,6 +55,7 @@ function App() {
           <Route path='/pets/:id' element={<PetProfile />} />
 
           <Route path='/me/applications' element={<Applications />} />
+          <Route path='/me/dashboard' element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
 
